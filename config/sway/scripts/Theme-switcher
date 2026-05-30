@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Liste de vos thèmes sombres (et un clair optionnel)
+# Assurez-vous que ces noms correspondent exactement aux dossiers dans /usr/share/themes
+THEMES=(
+	"Catppuccin-Frappe-Lavender"
+	"Catppuccin-Macchiato-Lavender"
+	"Catppuccin-Mocha-Lavender"
+	"Matcha-dark-sea"
+	"Nordic"
+	"Nordic-Darker"
+	"Nordic-Polar"
+  
+)
+
+# Récupérer le thème actuel pour le pré-sélectionner (optionnel)
+CURRENT=$(gsettings get org.gnome.desktop.interface gtk-theme | tr -d "'")
+
+# Générer la liste pour Rofi
+LIST=""
+for theme in "${THEMES[@]}"; do
+  LIST+="$theme\n"
+done
+
+# Lancer Rofi pour choisir le thème
+CHOSEN=$(echo -e "$LIST" | rofi -dmenu -p -config ~/.config/rofi/theme-switcher.rasi "Choisir le thème GTK" -format s)
+
+if [ -n "$CHOSEN" ]; then
+  # Appliquer le thème GTK
+  gsettings set org.gnome.desktop.interface gtk-theme "$CHOSEN"
+  
+  # Appliquer le schéma de couleur (Dark/Light) pour GTK4/Libadwaita
+  if [[ "$CHOSEN" == *"Dark"* ]] || [[ "$CHOSEN" == *"Mocha"* ]] || [[ "$CHOSEN" == *"Nord"* ]] || [[ "$CHOSEN" == *"Frappe"* ]]; then
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+  else
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+  fi
+  
+  # Notification de confirmation (optionnel)
+  notify-send "Thème changé" "Le thème $CHOSEN a été appliqué."
+fi   

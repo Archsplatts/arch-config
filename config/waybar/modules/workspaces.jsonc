@@ -1,0 +1,16 @@
+{
+"sway/workspaces": {			
+	"format-icons": {
+		"focused": "",
+		"default": ""					
+	},
+	"persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": []
+    },
+	"sort-by-number": true,
+	"cursor": true	
+	}
+}
+

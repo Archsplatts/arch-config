@@ -1,0 +1,26 @@
+window {
+  border-radius: 2;
+  opacity: 0.97;
+ /* border: 2px solid @border-color;*/
+
+  background-color: #1e1e2e;
+}
+
+label {
+  font-family: 'UbuntuMono Nerd Font';
+  font-size: 12pt;
+
+  color: #cdd6f4;
+}
+
+image {
+  color: @image;
+}
+
+progressbar {
+  border-radius: 2;
+}
+
+progress {
+  background-color: #89b4fa;
+}
