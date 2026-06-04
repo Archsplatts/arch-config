@@ -155,7 +155,13 @@ fi
 PAQUETS_MAO=(
  	"guitarix" 
 	"helvum" 
+	"lib32-pipewire"
+	"pipewire"
+	"pipewire-alsa"
+	"pipewire-pulse"
+	"pipewire-jack"
 	"reaper"
+	"wireplumber"
 )
 
 echo -e "${JAUNE}Installation des paquets M.A.O${NC}\n"
