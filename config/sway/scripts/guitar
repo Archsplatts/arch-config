@@ -1,3 +1,11 @@
 #!/bin/bash
 
-amberol & guitarix
+guitarix &
+
+sleep 0.5
+
+rhythmbox &
+
+sleep 0.5
+
+foot cava
