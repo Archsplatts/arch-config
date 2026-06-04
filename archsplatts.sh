@@ -224,6 +224,7 @@ PAQUETS_UTILS=(
 	"lxappearance" 
 	"micro" 
 	"network-manager-applet" 
+	"nwg-displays"
 	"pacman-contrib" 
 	"papers" 
 	"realtime-privileges" 
