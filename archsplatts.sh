@@ -264,7 +264,9 @@ fi
 PAQUETS_THEMES=(
 	"breeze-cursors" 
 	"noto-fonts"
+	"noto-fonts-cjk"
 	"noto-fonts-emoji"
+	"noto-fonts-extra"
 	"papirus-icon-theme" 
 	"ttf-hack-nerd"
 	"ttf-jetbrains-mono-nerd" 
