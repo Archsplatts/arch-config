@@ -2,18 +2,18 @@ export BAT_THEME="Catppuccin Mocha"
 export EDITOR="micro"
 export MICRO_TRUECOLOR=1
 
-# Nettoyage
+# --- Nettoyage --- #
 alias cleancache="sudo pacman -Sc"
 alias cleanorphans="sudo pacman -Rs $(pacman -Qdtq)"
 alias orphans="pacman -Qdtq"
 
-# Sway
+# --- Sway --- #
 alias bar="yazi ~/.config/waybar"
 alias conf="yazi .config"
 alias sw="micro ~/.config/sway/config"
 alias rof="yazi ~/.config/rofi"
 
-# Système
+# --- Système --- #
 alias batexp="bat ~/Info/ExpList"
 alias batlist="bat ~/Info/PkgList"
 alias cache="dust .cache"
@@ -24,7 +24,7 @@ alias mirrors="sudo reflector --country France,Germany --latest 10  --protocol h
 alias rm="trash -v"
 alias zshrc="micro .zshrc"
 
-# Utilitaires
+# --- Utilitaires --- #
 alias c="clear"
 alias ff="fastfetch"
 alias fm="yazi"
@@ -32,7 +32,7 @@ alias info="yazi ~/Info"
 alias pkglist="pacman -Qqe > ~/Info/ExpList && pacman -Qq > ~/Info/PkgList"
 alias todo="calcurse"
 
-# History file for zsh
+# --- History file for zsh --- #
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
