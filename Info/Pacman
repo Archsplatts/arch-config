@@ -1,0 +1,54 @@
+Mettre à jour la base 		sudo pacman -Syu
+de données et tous les 
+paquets du système
+
+Installer un paquet			sudo pacman -S nomdupaquet
+
+Chercher un paquet 			pacman -Ss nomdupaquet
+dans les dépôts
+
+Chercher un paquet 			pacman -Qs
+installé
+
+Obtenir plus d'infos 		pacman -Si
+sur un paquet				pacman -Qi 
+
+Obtenir la liste de 		pacman -Qq
+tous les paquets 
+installés
+
+Obtenir la liste de 		pacman -Qqe
+tous les paquets 
+explicitement installés
+
+Vérifier les fichiers 		pacman -Qk
+manquants ou corrompus
+
+Supprimer un paquet			sudo pacman -Rns
+
+Afficher les paquets 		sudo pacman -Qdtq
+orphelins
+
+Supprimer tous les 			sudo pacman -Qtdq | pacman -Rns -
+paquets orphelins
+
+---
+
+## Erreurs communes
+Unable to lock database : sudo rm /var/lib/pacman/db.lck
+
+Error reading fd 7
+sudo rm -rf /var/cache/pacman/pkg/download-*
+
+# la validation de la transaction a échoué
+-sudo pacman -S nom_du_paquet -v  # Mode verbeux
+
+-vérifiez les clés GPG
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+sudo pacman-key --refresh-keys
+
+-sudo reflector --country France,Germany --latest 15 --protocol https --sort rate 
+--save /etc/pacman.d/mirrorlist
+
+-vider le cache sudo pacman -Scc 

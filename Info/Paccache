@@ -1,0 +1,34 @@
+Affiche la liste des mises à jour en attente sans		checkupdates       
+modifier les bases de données de synchronisation 
+du système (sécurité pour les rolling release)
+                    
+Utilitaire flexible de nettoyage du cache des			paccache
+paquets qui permet un contrôle plus précis des 
+paquets à supprimer
+
+Met à jour les fichiers pacnew/pacsave dans /etc/		pacdiff
+
+Liste tous les paquets installés provenant d’un 		paclist 
+dépôt donné. Utile pour voir quels paquets 
+proviennent,par exemple, des dépôts testing
+
+Énumère les paquets actuellement installés à 			paclog-pkglist
+partir du log de pacman																
+
+Affiche les scripts d’un paquet donné					pacscripts
+
+Recherche colorisée combinant les sorties 				pacsearch
+de -Ss et -Qs. 
+
+Concatène les fichiers donnés, les trie, et 			pacsort
+écrit le résultat sur la sortie standard
+
+Classe les miroirs pacman selon leur vitesse 			rankmirrors
+de connexion et d’ouverture
+
+Met à jour sur place les sommes de contrôle 			updpkgsums 
+dans un PKGBUILD
+
+# paccache.timer
+	sudo systemctl enable paccache.timer
+/etc/conf.d/pacman-contrib

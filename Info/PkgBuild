@@ -1,0 +1,28 @@
+#--- Examiner un PKGBUILD --- #
+
+#--- Source du logiciel --- #
+
+Vérifiez que les URL (`source=`) pointent 
+vers le dépôt officiel (ici GitHub) ou des sources fiables. 
+Un lien cassé peut être un signe de négligence.
+
+#--- Sécurité des téléchargements --- # 
+
+Assurez-vous que les sources sont 
+téléchargées via `https` et que des sommes de contrôle 
+(sha256sums) sont présentes et valides. 
+Cela empêche les fichiers d'être altérés pendant le transfert.
+
+#--- Contenu du script --- #
+Lisez attentivement le contenu du PKGBUILD, 
+en particulier les fonctions prepare(), build() et package(). 
+Cherchez des commandes suspectes ou potentiellement dangereuses 
+qui pourraient nuire à votre système. Par exemple, un PKGBUILD 
+pour tuxguitar  a été corrigé pour remplacer `http` par `https` 
+dans une dépendance Maven, ce qui était une faille de sécurité.
+ 
+# --- Dépendances --- # 
+
+Vérifiez que les dépendances listées 
+(`depends=`, `makedepends=`) sont logiques et nécessaires pour 
+le logiciel.

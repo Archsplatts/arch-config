@@ -1,0 +1,11 @@
+# --- Afficher les couleurs disponibles --- #
+papirus-folders -l 
+
+# --- Changer de couleur --- #
+papirus-folders -C cat-mocha-lavender
+
+#--- Revenir à la couleur par défaut --- #
+papirus-folders -D 
+
+#--- Revenir à la dernière couleur utilisée --- #
+papirus-folders -Ru

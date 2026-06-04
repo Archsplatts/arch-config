@@ -1,0 +1,39 @@
+# --- Après une mise à jour --- #
+-Gérer les paquets orphelins
+orphans         Lister les paquets orphelins
+cleanorphans    Supprimer les paquets orphelins
+
+-Gérer les fichiers .pacnew/.pacsave
+pacdiff
+
+# --- Automatique --- #
+-Cache de Pacman (hebdomadaire)
+	paccache -rvk3
+
+-Journal & Logs
+/etc/systemd/journald.conf  SystemMaxUse=100M
+
+-Sauvegarde système avec timeshift (hebdomadaire)
+
+# --- Fichiers de Log --- #
+Pour la recherche d'erreurs dans les journaux, fichiers de /var/log, 
+ainsi que les erreurs de haute priorité du journal de systemd:
+	journalctl -p 3 -xb
+
+# --- Libérer de l'espace --- #
+-Anciens fichiers de configuration
+Surveiller les répertoires suivants:
+~/.config/
+~/.cache/
+~/.local/share/
+
+-Utilisation du disque avec dust
+
+-Nettoyage du cache de pacman
+alias cleancache="sudo pacman -Sc" Effacer le cache des paquets 
+desinstallés
+
+var/cache/pacman/pkg
+
+# --- Recenser les services défaillants --- #
+	systemctl --failed
