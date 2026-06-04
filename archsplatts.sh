@@ -214,6 +214,7 @@ PAQUETS_UTILS=(
 	"7zip" 
 	"arch-wiki-docs"
 	"base-devel"
+	"baobab"
 	"bat" 
 	"bleachbit" 
 	"btop" 
