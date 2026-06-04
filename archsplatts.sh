@@ -231,6 +231,7 @@ PAQUETS_UTILS=(
  	"starship"
  	"timeshift" 
 	"trash-cli" 
+	"tumbler"
 	"ufw" 
 	"unzip"
 	"wev"
