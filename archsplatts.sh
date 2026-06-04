@@ -237,7 +237,6 @@ PAQUETS_UTILS=(
 	"wev"
 	"wget" 
 	"xarchiver"
-	"xdg-utils" 
 	"yazi" 
 	"zip"
 	"zsh"
