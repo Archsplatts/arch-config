@@ -2,6 +2,8 @@
 
 # --- Copier la config --- #
 mkdir -p ~/Images/Wallpapers
+mkdir -p ~/Info
+
 cd config
 cp -r config/* ~/.config
 cp -r Wallpapers/* ~/Images/Wallpapers
