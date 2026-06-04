@@ -3,7 +3,7 @@
 	set $term foot
 	set $menu rofi -show drun -config ~/.config/rofi/applications-menu.rasi
 	set $filemanager thunar
-	set $web brave-origin-beta
+	set $web firefox
 	set $texteditor geany
 
 # --- Output configuration --- #
