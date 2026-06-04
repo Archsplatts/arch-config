@@ -121,6 +121,7 @@ fi
 	"polkit-gnome"  
 	"qt6-wayland"
 	"rofi" 
+	"sddm"
 	"slurp"
 	"sway"
 	"swaybg"
