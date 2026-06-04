@@ -1,15 +1,13 @@
-# Colors
-background-color=#1e1e2e
+# --- Colors --- #
+background-color=#1e1e2eD9
+border-color=#1e1e2e
 text-color=#cdd6f4
-border-color=#b4befe
 progress-color=over #313244
 
-# General
-anchor=bottom-right
-border-radius=10
-#font=
-icon-path=/usr/share/icons/Papirus
-default-timeout=3000
+# --- General --- #
+border-radius=4
+font=Ubuntu Regular 11
+default-timeout=5000
 
 [urgency=high]
 border-color=#fab387
