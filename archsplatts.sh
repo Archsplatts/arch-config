@@ -251,6 +251,7 @@ PAQUETS_UTILS=(
 	"xdg-utils" 
 	"yazi" 
 	"zip"
+	"zsh"
 	"zsh-autosuggestions" 
 	"zsh-completions" 
 	"zsh-history-substring-search" 
