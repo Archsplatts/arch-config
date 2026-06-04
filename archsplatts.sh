@@ -203,6 +203,7 @@ PAQUETS_UTILS=(
 	"bat" 
 	"bleachbit" 
 	"btop" 
+	"cava"
 	"calcurse"
 	"chafa" 
 	"cpupower" 
