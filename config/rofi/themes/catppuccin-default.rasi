@@ -1,6 +1,6 @@
 //@import "catppuccin-frappe"
-@import "catppuccin-macchiato"
-//@import "catppuccin-mocha"
+//@import "catppuccin-macchiato"
+@import "catppuccin-mocha"
 
 * {
   selected-active-foreground:  @background;
