@@ -1,6 +1,6 @@
 Script post installation ArchLinux avec une configuration Sway
 
-#--- Authentification --- #
+# --- Authentification --- #
 
 Gestionnaire de connexion	sddm (à activer au besoin)
 
