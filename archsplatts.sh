@@ -122,6 +122,7 @@ fi
 	"qt6-wayland"
 	"rofi" 
 	"sddm"
+	"sddm-kcm"
 	"slurp"
 	"sway"
 	"swaybg"
