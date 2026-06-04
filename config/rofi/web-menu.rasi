@@ -14,7 +14,6 @@ window {
 	border-radius:	  	18;
     padding:          	14;
     width:            	25%; 
-    /*background-image: 	url("~/.config/rofi/images/ruins.jpg", height); */       
 }
 
 mainbox {
