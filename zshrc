@@ -31,7 +31,6 @@ alias fm="yazi"
 alias info="yazi ~/Info"
 alias pkglist="pacman -Qqe > ~/Info/ExpList && pacman -Qq > ~/Info/PkgList"
 alias todo="calcurse"
-alias toshiba="yazi /run/media/bloodsplatts/ToshibaExt4"
 
 # History file for zsh
 HISTFILE=~/.zsh_history
