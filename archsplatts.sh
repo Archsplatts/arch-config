@@ -123,6 +123,7 @@ fi
 	"swayosd" 
 	"thunar"
 	"thunar-archive-plugin"
+	"thunar-media-tags-plugin"
 	"thunar-volman"
 	"waybar"
 	"wl-clipboard"
