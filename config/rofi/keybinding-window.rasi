@@ -22,7 +22,7 @@ mainbox {
 listview {
 	border: 	0; 
 	columns:  	1;
-    lines:    	22;
+    lines:    	24;
  	padding:  	2px 0px 0px;
 	scrollbar:	false;
     spacing:  	6px;    
