@@ -167,6 +167,7 @@ fi
 PAQUETS_MULTIMEDIA=(
 	"discord" 
 	"ffmpeg"
+	"ffmpegthumbnailer"
 	"firefox" 
 	"flac"
 	"gamemode" 
