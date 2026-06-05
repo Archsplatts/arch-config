@@ -202,7 +202,6 @@ PAQUETS_UTILS=(
 	"arch-wiki-docs"
 	"base-devel"
 	"bat" 
-	"bleachbit" 
 	"btop" 
 	"cava"
 	"calcurse"
