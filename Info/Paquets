@@ -23,7 +23,7 @@ lib32-mangohud mangohud parole rhythmbox steam thunderbird transmission-gtk
  
 # --- Utilitaires --- #
 
-7zip arch-wiki-docs base-devel bat bleachbit btop calcurse cava chafa cpupower dust 
+7zip arch-wiki-docs base-devel bat btop calcurse cava chafa cpupower dust 
 fastfetch galculator geany gvfs gvfs-mtp imagemagick impression lact 
 libappindicator libmtp micro network-manager-applet nwg-displays nwg-look
 pacman-contrib realtime-privileges ristretto starship termdown timeshift trash-cli 
