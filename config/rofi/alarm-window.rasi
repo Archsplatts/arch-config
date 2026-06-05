@@ -66,6 +66,8 @@ element selected normal, element selected active {
 element-text {
   	background-color:	inherit;
 	text-color: 		inherit;
+	horizontal-align: 0.5;
+	text-align:center;
 }
 element-icon {
     size: 35px;
