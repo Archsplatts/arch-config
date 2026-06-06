@@ -1,6 +1,6 @@
 Script post installation ArchLinux avec une configuration Sway
 
-![script-preview](config/script-preview.png)
+![script](script-preview.png)
 
 # --- Authentification --- #
 
