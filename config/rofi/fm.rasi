@@ -30,7 +30,8 @@ window {
 	transparency:		"real";
     width: 600px;
     location: center;
-    border: 0;
+	border:           	2px;
+	border-color:		@blue;
     border-radius:  	18px;  
     padding:          	14px; 
 }
