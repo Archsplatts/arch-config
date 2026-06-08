@@ -206,6 +206,7 @@ PAQUETS_UTILS=(
 	"cava"
 	"calcurse"
 	"chafa" 
+	"cliphist"
 	"cpupower" 
 	"dust" 
 	"fastfetch" 
