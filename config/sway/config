@@ -39,11 +39,14 @@
 	bindsym $mod+Shift+c reload
 	bindsym $mod+Shift+space floating toggle
 
-	bindsym $mod+c exec ~/.config/rofi/scripts/config-menu
-	bindsym $mod+Shift+e exec ~/.config/rofi/scripts/powermenu
-	bindsym $mod+h exec ~/.config/rofi/scripts/show-keybinding
-	bindsym $mod+b exec ~/.config/rofi/scripts/web-menu
+	bindsym $mod+a exec ~/.config/rofi/scripts/alarm-window
+	bindsym $mod+r exec rofi -show filebrowser -config .config/rofi/fm.rasi
 	bindsym $mod+g exec ~/.config/sway/scripts/guitar
+	bindsym $mod+h exec ~/.config/rofi/scripts/show-keybinding
+	bindsym $mod+c exec ~/.config/rofi/scripts/config-menu
+	bindsym $mod+b exec ~/.config/rofi/scripts/web-menu
+	bindsym $mod+Shift+e exec ~/.config/rofi/scripts/powermenu
+	bindsym $mod+Shift+r exec ~/.config/sway/scripts/rand-wallpaper
 
 	bindsym Print exec flameshot gui
 	bindsym $mod+n exec nm-connection-editor
