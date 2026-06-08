@@ -44,6 +44,7 @@
 	bindsym $mod+g exec ~/.config/sway/scripts/guitar
 	bindsym $mod+h exec ~/.config/rofi/scripts/show-keybinding
 	bindsym $mod+c exec ~/.config/rofi/scripts/config-menu
+	bindsym $mod+v exec cliphist list | rofi -dmenu -p "Clipboard" -config .config/rofi/clipboard.rasi | cliphist decode | wl-copy	
 	bindsym $mod+b exec ~/.config/rofi/scripts/web-menu
 	bindsym $mod+Shift+e exec ~/.config/rofi/scripts/powermenu
 	bindsym $mod+Shift+r exec ~/.config/sway/scripts/rand-wallpaper
