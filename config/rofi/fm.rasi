@@ -13,8 +13,8 @@ configuration {
 	disable-history:     	true;
     show-icons: true;             
     font: "Ubuntu Regular 12";               
-    display-recursivebrowser: "Fichiers (récursif)";          
-    display-filebrowser: "Fichiers"; 
+    display-recursivebrowser: "  Fichiers (récursif)";          
+    display-filebrowser: "  Fichiers"; 
     kb-delete-entry: "Shift+Delete"; 
  }
 
@@ -48,6 +48,9 @@ inputbar {
 	children:   		[ prompt, entry ];
 	padding:    		8px 16px;
     spacing:    		8px;   
+    border: 0px 0px 2px 0px;
+    border-color : @blue;
+    border-radius:                  16px;
 }
 
 prompt {
@@ -57,7 +60,6 @@ prompt {
 entry {
     placeholder:        "Rechercher...";
     placeholder-color:	 @overlay0;
-   
 }
 
 message {
@@ -104,25 +106,24 @@ element alternate normal {
 
 mode-switcher {
     enabled: true;
-    spacing: 10px; /* Espace entre les boutons */
+    spacing: 10px;
     border: 0;
-    padding: 10px 0 0 0; /* Marge uniquement en haut */
+    padding: 10px 0 0 0;
     background-color: transparent;
-    children: [button]; /* Simplifie la structure */
+    children: [button]; 
 }
 
 button {
     background-color: transparent;
-    border: 0;
     border-radius: 8px;
     padding: 6px 12px;
-    text-color: @overlay0; /* Couleur discrète pour l'inactif */
+    text-color: @overlay0;
     font: "Ubuntu Regular 11";
     cursor: pointer;
 }
 
 button selected {
-    background-color: @surface1; /* Fond subtil pour le mode actif */
-    text-color: @blue; /* Texte coloré pour le mode actif */
+    background-color: @surface1; 
+    text-color: @blue; 
     font: "Ubuntu Medium 11";
 }   
