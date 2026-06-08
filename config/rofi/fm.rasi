@@ -1,0 +1,128 @@
+@theme "catppuccin-default"
+
+* {
+    background-color:	transparent;
+	margin:     		0px;
+    padding:    		0px;
+    spacing:    		0px;  
+    text-color:        	@text;
+}
+
+configuration {
+    modi: "filebrowser,recursivebrowser";  
+	disable-history:     	true;
+    show-icons: true;             
+    font: "Ubuntu Regular 12";               
+    display-recursivebrowser: "Fichiers (récursif)";          
+    display-filebrowser: "Fichiers"; 
+    kb-delete-entry: "Shift+Delete"; 
+ }
+
+filebrowser {
+    directory: "/home"; 
+    directories-first: true;    
+    sorting-method: "name";            
+	show-hidden: true;
+}
+
+window {
+	background-color:  	rgba(36,39,58,0.96);
+	transparency:		"real";
+    width: 600px;
+    location: center;
+    border: 0;
+    border-radius:  	18px;  
+    padding:          	14px; 
+}
+
+
+mainbox {
+    padding:    14px;
+    children: [inputbar, mode-switcher, listview]; 
+    spacing: 5px; 
+}
+
+inputbar {
+    background-color:  	@surface0;
+    border-radius:  	16px;
+	children:   		[ prompt, entry ];
+	padding:    		8px 16px;
+    spacing:    		8px;   
+}
+
+prompt {
+    text-color: #cdd6f4;
+}
+
+entry {
+    placeholder:        "Rechercher...";
+    placeholder-color:	 @overlay0;
+   
+}
+
+message {
+	background-color:   transparent; 
+	border-color:       transparent;
+    border-radius:      16px;
+ 	margin:             12px 0 0; 
+
+}
+
+textbox {
+    padding:    8px 24px;
+    text-color:	@text;
+     
+}
+
+listview {
+    lines: 12;
+    columns: 1;
+    background-color: transparent;
+    scrollbar:    		false; 
+    border: 0px;
+}
+
+element {
+    padding: 10px;
+    background-color: inherit;
+}
+
+element selected  normal, element selected active {
+    background-color: inherit;
+    text-color: @blue;
+}   
+
+element normal normal {
+    background-color:	transparent;
+    text-color: 		@text;
+}
+
+element alternate normal {
+    background-color:	transparent;
+    text-color:			@text;
+}
+
+mode-switcher {
+    enabled: true;
+    spacing: 10px; /* Espace entre les boutons */
+    border: 0;
+    padding: 10px 0 0 0; /* Marge uniquement en haut */
+    background-color: transparent;
+    children: [button]; /* Simplifie la structure */
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    padding: 6px 12px;
+    text-color: @overlay0; /* Couleur discrète pour l'inactif */
+    font: "Ubuntu Regular 11";
+    cursor: pointer;
+}
+
+button selected {
+    background-color: @surface1; /* Fond subtil pour le mode actif */
+    text-color: @blue; /* Texte coloré pour le mode actif */
+    font: "Ubuntu Medium 11";
+}   
