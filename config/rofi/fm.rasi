@@ -13,7 +13,7 @@ configuration {
 	disable-history:     	true;
     show-icons: true;             
     font: "Ubuntu Regular 12";               
-    display-recursivebrowser: "  Fichiers (récursif)";          
+    display-recursivebrowser: "   Fichiers";          
     display-filebrowser: "  Fichiers"; 
     kb-delete-entry: "Shift+Delete"; 
  }
@@ -30,8 +30,8 @@ window {
 	transparency:		"real";
     width: 600px;
     location: center;
-	border:           	2px;
-	border-color:		@blue;
+ 	border:           	2px;
+ 	border-color:		@blue;
     border-radius:  	18px;  
     padding:          	14px; 
 }
