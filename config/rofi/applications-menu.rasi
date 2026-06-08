@@ -9,11 +9,12 @@
 }
 
 configuration {
-	display-drun: 			"Applications";
+	display-drun: 			"󰍜  Applications";
 	disable-history:     	true;	  
 	drun-display-format:	"{name}";
     font:   				"Ubuntu Regular 13";
  	icon-theme:          	"Papirus-dark";
+	modi: 					"drun,run";
 	scroll-method:       	0;  
 	show-icons:          	true;
 	sidebar-mode:        	false;
@@ -21,10 +22,10 @@ configuration {
 
 window {
 	background-color:  	rgba(36,39,58,0.96);
-	transparency:		"real";
 	border:           	0;
     border-radius:  	18px;
 	padding:          	14px;
+	transparency:		"real";
     width:          	450;  
 }
 
@@ -35,6 +36,8 @@ mainbox {
 inputbar {
     background-color:  	@surface0;
     border-radius:  	16px;
+    border: 0px 0px 2px 0px;
+    border-color: 		@blue;
 	children:   		[ prompt, entry ];
 	padding:    		8px 16px;
     spacing:    		8px;   
@@ -45,7 +48,7 @@ prompt {
 }
 
 entry {
-    placeholder:        "Rechercher";
+    placeholder:        "Rechercher...";
     placeholder-color:	 @overlay0;
 }
 
@@ -75,9 +78,9 @@ listview {
 
 element {
 	background-color: inherit; 
+	border-radius:  16px;
     padding:        8px 16px;
-    spacing:        8px;
-    border-radius:  16px;
+    spacing:        8px;   
 }
 
 element selected normal, element selected active {
@@ -91,8 +94,8 @@ element-icon {
 }
 
 element-text {
+	background-color:	inherit;
     text-color: inherit;
-    background-color:	inherit;
 }
 
 element normal normal {
@@ -104,4 +107,3 @@ element alternate normal {
     background-color:	transparent;
     text-color:			@text;
 }
-
