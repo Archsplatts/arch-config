@@ -9,7 +9,8 @@
 }
 
 configuration {
-	display-drun: 			"󰍜  Applications";
+	display-drun: 			" ";
+	display-run:			" ";
 	disable-history:     	true;	  
 	drun-display-format:	"{name}";
     font:   				"Ubuntu Regular 13";
