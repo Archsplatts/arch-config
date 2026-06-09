@@ -183,8 +183,8 @@ label:focus {
 #pulseaudio {
     padding-left: 8px;
     padding-right: 12px;
-    border-bottom: 2px solid @green;
-    color: @green;
+    border-bottom: 2px solid @teal;
+    color: @teal;
 }
 
 #pulseaudio.muted {
@@ -193,8 +193,8 @@ label:focus {
 }
 
 #clock {
-	border-bottom: 2px solid @teal;
-	color: @teal;
+	border-bottom: 2px solid @green;
+	color: @green;
 }
 
 #custom-power {
