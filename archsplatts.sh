@@ -180,7 +180,7 @@ PAQUETS_MULTIMEDIA=(
 	"lib32-gamemode"
 	"lib32-mangohud" 
 	"mangohud"
-	"parole"
+	"mpv"
 	"rhythmbox"
 	"steam" 
 	"thunderbird" 
