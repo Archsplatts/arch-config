@@ -10,8 +10,8 @@ window {
 	border:           	2px;
 	border-color:		@blue;
 	border-radius:	  	18;
-	location:         	south west;
-	margin: 			0px 0px 10px 10px;	    
+	location:         	west;
+	margin: 			0px 0px 0px 8px;	    
     width:            	350px;        
 }
 
