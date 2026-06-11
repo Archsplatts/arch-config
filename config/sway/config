@@ -21,7 +21,7 @@
 
 # --- Appearance --- #
 
-	gaps inner 10
+	gaps inner 8
 	default_border pixel 2
 	default_floating_border pixel 2
 	default_orientation auto
