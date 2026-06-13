@@ -1,0 +1,41 @@
+#!/bin/bash
+
+options="󰚰  Chercher des mises à jour\n󰮯  Mise à jour miroirs et système\n󱧖  Supprimer les paquets orphelins\n󰃢 Nettoyer le cache de pacman\n  Générer les listes de paquets\n  Vérifier les erreurs\n  Git clone Archsplatts\n Sauvegarde Timeshift"
+
+selection=$(echo -e "$options" | rofi -dmenu -config ~/.config/rofi/system-menu.rasi)
+
+if [[ -n "$selection" ]]; then
+    case "$selection" in
+        "󰚰  Chercher des mises à jour")
+            foot sh -c "checkupdates; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+            ;;
+        "󰮯  Mise à jour miroirs et système")
+            foot sh -c "sudo reflector --country France,Germany --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose && sudo pacman -Syyu && yay -Syua; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+            ;;
+        "󱧖  Supprimer les paquets orphelins")
+               orphans=$(pacman -Qdtq 2>/dev/null)
+            if [[ -n "$orphans" ]]; then
+                # Si la liste n'est pas vide, on lance la suppression
+                foot sh -c "sudo pacman -Rns \$($0 -c \"echo '$orphans'\"); echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+            else
+                # Sinon, on affiche un message d'information
+                foot sh -c "echo 'Aucun paquet orphelin trouvé.'; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+            fi
+            ;;
+        "󰃢 Nettoyer le cache de pacman")
+            foot sh -c "sudo pacman -Sc; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+            ;;
+        "  Générer les listes de paquets")
+            foot sh -c "pacman -Qqe > ~/Info/ExpList && pacman -Qq > ~/Info/PkgList; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+            ;;
+        "  Vérifier les erreurs")
+            foot sh -c "journalctl -p 3 -xb; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+            ;;
+        "  Git clone Archsplatts")
+            foot sh -c "git clone https://github.com/Archsplatts/config; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+            ;;
+        " Sauvegarde Timeshift")
+			foot sh -c "sudo timeshift --create"
+			;;
+    esac
+fi   
