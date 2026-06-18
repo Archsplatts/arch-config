@@ -31,8 +31,9 @@ if [ -t 0 ]; then
     read -p "Appuyez sur Entrée pour continuer... "
 fi   
 
- # --- 1.Reflector --- #
-echo -e "${JAUNE}Mise à jour de la liste des miroirs${NC}\n"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[1/12] Mise à jour de la liste des miroirs${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 if ! pacman -S --needed --noconfirm reflector; then
     echo -e "${ROUGE}Échec de l'installation de reflector.${NC}"
@@ -51,8 +52,9 @@ else
     exit 1
 fi
 
-# --- 2.Activation du dépôt multilib et mise à jour du système --- #
-echo -e "${JAUNE}Activation du dépôt multilib${NC}\n"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[2/12] Activation de multilib et mise à jour${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 cp /etc/pacman.conf /etc/pacman.conf.backup
 
@@ -80,7 +82,10 @@ else
     exit 1
 fi
 
-# --- 3.Installation des pilotes de la carte graphique --- #
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[3/12] Installation des pilotes GPU${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
  PAQUETS_AMD=(
 	"lib32-mesa"
 	"lib32-vulkan-icd-loader"
@@ -99,7 +104,10 @@ else
     exit 1
 fi
 
-# --- 4.Installation de Sway --- #
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[4/12] Installation de Sway${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
  PAQUETS_DE=(
 	"autotiling" 
 	"brightnessctl"
@@ -141,7 +149,10 @@ else
     exit 1
 fi
 
-# --- 5.Installation des paquets M.A.O --- #
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[5/12] Installation des paquets M.A.O${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
 PAQUETS_MAO=(
  	"guitarix" 
 	"helvum" 
@@ -163,7 +174,10 @@ else
     exit 1
 fi
 
-# --- 6.Installation des paquets multimedia --- #
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[6/12] Installation des paquets multimedia${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
 PAQUETS_MULTIMEDIA=(
 	"discord" 
 	"ffmpeg"
@@ -196,7 +210,10 @@ else
     exit 1
 fi
 
-# --- 7.Installation des utilitaires --- #
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[7/12] Installation des utilitaires${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
 PAQUETS_UTILS=(
 	"7zip" 
 	"arch-wiki-docs"
@@ -257,7 +274,10 @@ else
     exit 1
 fi
 
-# --- 8.Installation des thèmes et des polices --- #
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[8/12] Installation des thèmes et des polices${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
 PAQUETS_THEMES=(
 	"breeze-cursors" 
 	"noto-fonts"
@@ -284,7 +304,10 @@ fi
 
 USER="${SUDO_USER:-$(whoami)}"
 
-# --- 9. Installation de Yay (AUR Helper) --- #
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[9/12] Installation de yay (AUR Helper)${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
 echo -e "\n${JAUNE}Installation de Yay (AUR Helper)${NC}\n"
 
 # Vérifier que USER n'est pas vide et n'est pas root
@@ -319,8 +342,9 @@ else
     echo -e "${VERT}✓ Yay est déjà installé pour $USER.${NC}"
 fi
 
-# --- 10.Activation des services système--- #
-echo -e "${JAUNE}Activation des services${NC}\n"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[10/12] Activation des services système${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 # UFW (Pare-feu) - Service Système
 echo "Activation du pare-feu UFW..."
@@ -338,7 +362,10 @@ echo -e "${VERT}✓ LACT activé.${NC}"
 
 echo -e "${VERT}✓ Tous les services système ont été activés avec succès.${NC}\n"
 
-# --- 11.Configuration du shell ---#
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[11/12] Configuration du shell${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
 echo -e "${JAUNE}Configuration du shell Zsh${NC}\n"
 
 if getent passwd "$USER" | grep -q "/bin/zsh$"; then
@@ -349,7 +376,10 @@ else
     echo -e "${VERT}✓ Shell changé avec succès.${NC}"
 fi
 
-# --- 12.Ajout de l'utilisateur aux groupes --- #
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[12/12] Ajout de l'utilisateur aux groupes${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
 echo -e "\n${JAUNE}Configuration des groupes utilisateur${NC}"
 
 usermod -aG audio,input,gamemode,realtime,render,video "$USER"
