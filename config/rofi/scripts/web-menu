@@ -14,28 +14,28 @@ selection=$(echo -e "$options" | rofi -dmenu -show-icons -icon-theme "Papirus" -
 if [[ -n "$selection" ]]; then
     case "$selection" in
         "ArchWiki")
-            brave-origin-beta https://wiki.archlinux.org
+            firefox https://wiki.archlinux.org
             ;;
    		"BraveSearch")
-   		   	 brave-origin-beta https://search.brave.com 
+   		   	firefox https://search.brave.com 
    		   	 ;;     
   		"Korben")
-  			brave-origin-beta https://korben.info
+  			firefox https://korben.info
   			;;          
 		"ManjaroForum")
-			brave-origin-beta https://forum.manjaro.org/c/announcements/11
+			firefox https://forum.manjaro.org/c/announcements/11
 			;;
 		"Movix")
-			brave-origin-beta https://movix.bet
+			firefox https://movix.bet
 			;;
         "ProtonDB")
-            brave-origin-beta https://www.protondb.com
+            firefox https://www.protondb.com
             ;;
 		"Twitch")
 			firefox https://www.twitch.tv/directory
             ;;
         "Youtube")                    
-            brave-origin-beta https://www.youtube.com
+            firefox https://www.youtube.com
              ;; 
     esac
 fi   
