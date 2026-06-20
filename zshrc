@@ -7,6 +7,10 @@ alias cleancache="sudo pacman -Sc"
 alias cleanorphans="sudo pacman -Rs $(pacman -Qdtq)"
 alias orphans="pacman -Qdtq"
 
+# --- Papirus-folders --- #
+alias pfl="~/.scripts/papirus-folders -l"
+alias pfc="~/.scripts/papirus-folders -C"
+
 # --- Sway --- #
 alias bar="yazi ~/.config/waybar"
 alias conf="yazi .config"
