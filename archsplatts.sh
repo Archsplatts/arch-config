@@ -386,17 +386,8 @@ usermod -aG audio,input,gamemode,realtime,render,video "$USER"
 
 echo -e "${VERT}✓ Utilisateur ajouté aux groupes.${NC}\n"
 
-# Calcul de la durée
-END_TIME=$(date +%s)
-DURATION=$((END_TIME - START_TIME))
-MINUTES=$((DURATION / 60))
-SECONDES=$((DURATION % 60))
-
-# Résumé final
 echo -e "${VERT}╔════════════════════════════════════════╗${NC}"
 echo -e "${VERT}║  Installation terminée avec succès !   ║${NC}"
-echo -e "${VERT}╚════════════════════════════════════════╝${NC}"
-echo ""
-echo -e "${BLEU}Durée totale : ${MINUTES}m ${SECONDES}s${NC}"
-echo ""
-echo -e "${JAUNE}⚠ Veuillez redémarrer votre système pour appliquer tous les changements.${NC}"
+echo -e "${VERT}╚════════════════════════════════════════╝${NC}\n"
+
+echo -e "${JAUNE}⚠ Veuillez redémarrer votre système pour appliquer tous les changements.${NC}\n"
