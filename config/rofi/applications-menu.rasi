@@ -13,7 +13,7 @@ configuration {
 	display-run:			" ";
 	disable-history:     	true;	  
 	drun-display-format:	"{name}";
-    font:   				"Ubuntu Regular 13";
+    font:   				"UbuntuNerd Font 13";
  	icon-theme:          	"Papirus-dark";
 	modi: 					"drun,run";
 	scroll-method:       	0;  
