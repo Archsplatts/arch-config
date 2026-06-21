@@ -11,7 +11,7 @@
 configuration {
 	columns: 2;
     show-icons: true;             
-    font: "Ubuntu Regular 12";               
+    font: "UbuntuNerd Font 12";               
    
 }
 
