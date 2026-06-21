@@ -12,7 +12,7 @@ configuration {
     modi: "filebrowser,recursivebrowser";  
 	disable-history:     	true;
     show-icons: true;             
-    font: "Ubuntu Regular 12";               
+    font: "UbuntuNerd Font 12";               
     display-recursivebrowser: "   Fichiers";          
     display-filebrowser: "  Fichiers"; 
     kb-delete-entry: "Shift+Delete"; 
