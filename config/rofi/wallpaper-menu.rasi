@@ -17,7 +17,7 @@ configuration {
     urgent:         #E06B74FF;
 }
 * {
-    font: "UbuntuMono 14";
+    font: "UbuntuNerd Font 14";
 }
 
 /*****----- Main Window -----*****/
