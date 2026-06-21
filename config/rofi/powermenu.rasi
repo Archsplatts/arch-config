@@ -1,7 +1,7 @@
 @import "themes/catppuccin-default"
 
 configuration {
-    font: "UbuntuMono Nerd Font 38";  
+    font: "UbuntuNerd Font 38";  
 }
 
 window {
