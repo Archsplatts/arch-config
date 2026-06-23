@@ -1,13 +1,16 @@
 #!/bin/bash
 
 # Afficher le menu et capturer la sélection
-selection=$(echo -e "󰹑\n󰣶\n󰈐\n\n󰸉"| rofi -dmenu -config ~/.config/rofi/config-menu.rasi)
+selection=$(echo -e "󰹑\n󱥚\n󰣶\n󰈐\n\n󰸉"| rofi -dmenu -config ~/.config/rofi/config-menu.rasi)
 
 # Vérifier si une sélection a été faite
 if [[ -n "$selection" ]]; then
     case "$selection" in
         "󰹑")
 			nwg-displays
+			;;
+		"󱥚")
+			nwg-look
 			;;
         "󰣶")
             nm-connection-editor
