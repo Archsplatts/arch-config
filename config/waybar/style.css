@@ -2,18 +2,18 @@
 
 * {
     border: none;
-    border-radius: 4px;
     font-family: UbuntuMono Nerd Font, Font Awesome;
-   	font-size: 15px;
+   	font-size: 16px;
+   	font-weight: 500;
     min-height: 0;
     padding: 0px;
 }
 
 window#waybar {
-    background-color: rgba(49, 50, 68, 0.85);*
+	background-color: rgba(30, 30, 46, 0.85);
     color: @text;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    border-radius: 18px; 
+    border-radius: 12px; 
 }
 
 tooltip {
@@ -29,34 +29,34 @@ tooltip label {
 }
 
  #workspaces {
- 	background-color: transparent;		
- }
+ 	background-color: transparent;
+ 	font-weight: 600;
+}
 
 #workspaces button {
-    padding: 0 0;
     background-color: transparent;
     color: @overlay1;
-    border: none;
-    box-shadow: none;
-    text-shadow: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    margin: 4px 2px;
+    font-weight: 600;
+    
 }
 
 #workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
     background-image: linear-gradient(0deg, @surface1, @mantle);
+    font-weight: 700;
 }
 
 #workspaces button.focused {
 	 color: @blue;  
-     box-shadow: none;
      background-color: transparent;
-     border-bottom: 2px solid @blue;   
+     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+     font-weight: 800;
 }
 
 #workspaces button.urgent {
     background-image: linear-gradient(0deg, @red, @mantle);
+    font-weight: 700;
 }
 
 #taskbar button.active {
@@ -74,14 +74,38 @@ tooltip label {
 #cpu,
 #temperature,
 #disk,
-#custom-kernel,
+#custom-updates,
 #custom-power,
-#custom-help,
 #custom-menu,
+#tray menu,
 #tray {
     padding: 0 10px;
     margin: 4px 2px;
     color: @lavender;
+}
+
+/* Conteneur du menu déroulant */
+#tray menu {
+    background-color: @surface0;
+    border: 1px solid @surface1;
+    border-radius: 8px;
+    padding: 6px;
+    font-size: 15px;
+} 
+
+/* Éléments du menu (ex: Ouvrir, Quitter) */
+#tray menu menuitem {
+    background-color: transparent; 
+    color: @text;
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin: 2px 0;
+}
+
+/* Effet au survol */
+#tray menu menuitem:hover {
+    background-color: transparent;
+    color: @blue;
 }
 
 #window,
@@ -114,10 +138,10 @@ label:focus {
 
 #custom-menu {
 	background-color: transparent;
-	color: @blue;
+	color: @sky;
 	padding-left: 10px;
 	padding-right: 14px;
-	font-size: 20px;	
+	font-size: 19px;	
 }
 
 #tray {
@@ -133,76 +157,70 @@ label:focus {
     background-color: @mantle;
 }
 
-#cpu {
-	border-bottom: 2px solid @blue;
-	color: @blue;
-}
-
-#memory {
-	border-bottom: 2px solid @lavender;
-	color: @lavender;
-}
-
-#temperature {
-    min-width: 37px;
-    border-bottom: 2px solid @sky;
-    color: @sky;
-}
-
-#temperature.warning {
-    color: @peach;
-    border-bottom: 2px solid @peach;
-}
-
-#temperature.critical {
-    border-bottom: 2px solid @red;
-}
-
-#custom-help {
-	color: @mauve;
-	border-bottom: 2px solid @mauve;
-}
-
-#custom-kernel {
-	color: @overlay2;
-	border-bottom: 2px solid @overlay2;
-}
-
 #disk {
-    border-bottom: 2px solid @peach;
-    color: @peach;
+    color: @pink;
 }
 
 #disk.warning {
     color: @maroon;
-    border-bottom: 2px solid @maroon;
+}
+
+#custom-updates {
+	color: @mauve;
+}
+
+#memory {
+	color: @lavender;
+	font-weight: 600;
+}
+
+#cpu {
+	color: @blue;
+	font-weight: 600;
+}
+
+#temperature {
+    min-width: 37px;
+    color: @sapphire;
+    font-weight: 600;
+}
+
+#temperature.warning {
+    color: @peach;
+    font-weight: 600;
+}
+
+#temperature.critical {
+	color: @red;
+	font-weight: 600;
 }
 
 #pulseaudio {
     padding-left: 8px;
     padding-right: 12px;
-    border-bottom: 2px solid @teal;
-    color: @teal;
+    color: @sky;
+    font-weight: 600;
 }
 
 #pulseaudio.muted {
-    border-bottom: 2px solid @red;
     color: @red;
+    font-weight: 600;
 }
 
 #clock {
-	border-bottom: 2px solid @green;
-	color: @green;
+	color: @teal;
+	font-weight: 600;
 }
 
 #custom-power {
 	margin: 0;
 	padding-left: 0px;
+	padding-bottom: 1px;
 	color: #FFFFFF;
-	font-size: 16px;
+	font-size: 17px;
 }
 
-#cpu, #memory, #temperature, #custom-help, #disk, #clock {
-	padding-left: 8px;
-	padding-right: 8px;
+#memory, #cpu, #temperature, #disk, #clock {
+	margin: 0;
+	padding: 6px;
 }
