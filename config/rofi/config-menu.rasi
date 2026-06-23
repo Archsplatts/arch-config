@@ -10,7 +10,7 @@ window {
 	border:           	2px;
 	border-color:		@blue;
     border-radius:	  	18;
-    width:            	550px;            
+    width:            	600px;            
 }
 
 mainbox {
