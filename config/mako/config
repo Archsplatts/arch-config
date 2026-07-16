@@ -8,6 +8,9 @@ progress-color=over #313244
 border-radius=4
 font=Ubuntu Regular 11
 default-timeout=5000
+icons=1
+icon-path=/usr/share/icons/Papirus-Dark
+layer=overlay
 
 [urgency=high]
 border-color=#fab387
