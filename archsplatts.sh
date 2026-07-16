@@ -45,7 +45,7 @@ if [[ -f /etc/pacman.d/mirrorlist ]]; then
     echo -e "${JAUNE}Sauvegarde créée : mirrorlist.bak.$(date +%F)${NC}"
 fi
 
-if reflector --country France,Germany --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose; then
+if reflector --country France,Germany --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose; then
 	echo -e "${VERT}✓ Liste des miroirs optimisée.${NC}\n"
 else
     echo -e "${ROUGE}⚠ Erreur lors de la génération de la liste des miroirs.${NC}"
@@ -110,7 +110,6 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 
  PAQUETS_DE=(
 	"autotiling" 
-	"brightnessctl"
 	"flameshot" 
 	"foot"
 	"gammastep" 
@@ -127,13 +126,13 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 	"swaybg"
 	"swayidle"
 	"swaylock"
-	"swayosd" 
 	"thunar"
 	"thunar-archive-plugin"
 	"thunar-media-tags-plugin"
 	"thunar-volman"
 	"waybar"
 	"wl-clipboard"
+	"wl-clip-persist"
 	"wmenu"
 	"xdg-desktop-portal-gtk" 
 	"xdg-desktop-portal-wlr" 
@@ -195,10 +194,10 @@ PAQUETS_MULTIMEDIA=(
 	"lib32-mangohud" 
 	"mangohud"
 	"mpv"
+	"qbittorrent"
 	"rhythmbox"
 	"steam" 
 	"thunderbird" 
-	"transmission-gtk"
 )
 
 echo -e "${JAUNE}Installation des paquets multimedia${NC}\n"
