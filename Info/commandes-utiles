@@ -1,0 +1,34 @@
+# Créer une clé usb bootable
+sudo dd bs=4M if=/chemin/vers/fichier.iso of=/chemin/vers/usb status=progress && sync
+
+# Icônes des dossiers Home
+xdg-user-dirs-update
+
+# Option de lancement steam
+DXVK_FRAME_RATE=60 mangohud gamemoderun %command%
+
+# Lister les services actifs
+systemctl list-unit-files --state=enabled
+
+# Limiter la taille des logs à 100M
+sudo journalctl --vacuum-size=100M   
+
+# Supprimer les fichiers du cache de plus de 30 jours
+find ~/.cache -type f -atime +30 -delete   
+
+# Mango
+Liste plate de toutes les fenêtres ouvertes		mmsg get all-clients
+État de tous les tags 							mmsg get all-tags
+Détails de la fenêtre actuellement active 		mmsg get focusing-client
+
+# Raccourcis noyau linux
+Alt+Print+E : Arrête gentiment tous les processus utilisateur. 
+Alt+Print+I : Tue tous les processus (force la fermeture). 
+Alt+Print+B : Redémarre l'ordinateur proprement
+Ctrl+Alt+F3 : Basculer vers une console texte (TTY).
+Ctrl+Alt+F7 (ou F1/F2 selon la distribution) : Retourner à l'interface graphique
+
+# Sway
+Identifier l'affichage		swaymsg -t get_outputs
+Identifier une fenêtre		swaymsg -t get_tree
+Identifier une touche		xev (x11) ou wev (wayland)
