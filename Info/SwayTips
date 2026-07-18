@@ -1,9 +1,0 @@
-Identifier l'affichage			swaymsg -t get_outputs
-
-Identifier une fenêtre			swaymsg -t get_tree
-
-Identifier une touche			xev (x11) ou wev (wayland)
-
-Numlock au démarrage			input type:keyboard xkb_numlock enabled
-
-Sway default config				/etc/sway/config
