@@ -1,0 +1,7 @@
+{
+	"custom/menu": {
+		"format": "\u00A0",
+		"on-click": "rofi -show drun -config $HOME/.config/rofi/waybar-menu.rasi",
+		"tooltip": false
+	}
+}	

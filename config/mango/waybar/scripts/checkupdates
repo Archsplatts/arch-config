@@ -1,0 +1,17 @@
+#!/bin/bash
+
+official_updates=$(checkupdates 2>/dev/null | wc -l)
+aur_updates=0
+if command -v checkupdates-aur &> /dev/null; then
+    aur_updates=$(checkupdates-aur 2>/dev/null | wc -l)
+fi
+
+total_updates=$((official_updates + aur_updates))
+
+if [ "$total_updates" -gt 0 ]; then
+    # AJOUT DE "alt": "has-updates" CI-DESSOUS
+    echo "{\"text\": \"$total_updates\", \"alt\": \"has-updates\", \"class\": \"has-updates\", \"tooltip\": \"Mises à jour : $total_updates\"}"
+else
+    # AJOUT DE "alt": "updated" CI-DESSOUS
+    echo "{\"text\": \"\", \"alt\": \"updated\", \"class\": \"updated\", \"tooltip\": \"Système à jour\"}"
+fi   

@@ -1,0 +1,16 @@
+{
+   	"custom/updates": {
+    	"format": "{icon}",
+    	"return-type": "json",
+    	"interval": 3600,
+		"icon": true,
+    	"signal": 1, 
+    	"format-icons": {
+        	"has-updates": "󰚽",
+        	"updated": "\u00A0󰝬\u00A0\u00A0"
+    },
+    	"exec": "$HOME/.config/mango/waybar/scripts/checkupdates",
+		"on-click": "foot -e sudo pacman -Syu; pkill -SIGRTMIN+1 waybar",
+    	"on-click-right": "$HOME/.config/waybar/scripts/checkupdates; pkill -SIGRTMIN+1 waybar"
+	}
+}	

@@ -1,0 +1,15 @@
+{
+	"mango/layout": {
+		"format": "[] {symbol}",
+    	"format-T": " {symbol}",         
+    	"format-CT": " {symbol}",       
+    	"format-RT": " {symbol}",       
+    	"format-VT": " {symbol}",       
+    	"format-S": " {symbol}",         
+    	"format-VS": " 󰍝{symbol}",        
+    	"format-D": " {symbol}",        
+    	"tooltip": false,
+    	"on-click": "mmsg -l next",   
+    	"on-click-right": "mmsg -l prev"
+	}
+}	

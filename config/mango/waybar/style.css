@@ -1,0 +1,196 @@
+@import "colors.css";
+
+* {
+    font-family: UbuntuMono Nerd Font, Font Awesome;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @base;
+}
+
+tooltip {
+    background: @base;
+    border: 1px solid @surface1;
+    border-radius: 6px;
+}
+
+tooltip label {
+    color: @text;
+    margin: 4px;
+    padding: 4px;
+}
+
+label:focus {
+    background: @mantle;
+}
+
+#tray,#custom-updates,#custom-menu,#custom-circle3,#custom-circle4,#custom-circle5,#custom-circle6,#taskbar,
+#clock,#pulseaudio,#disk,#custom-system-infos,#network,#custom-power {
+	margin: 5px 0;
+}
+
+#tray,#pulseaudio,#clock,#disk {
+	padding: 0 8px;
+}
+
+#tray {
+	background: @surface0;
+}
+
+#custom-menu {
+	background: @blue;
+	color: @text;
+	font-size: 22px;
+	padding: 0 6px;
+}
+
+#custom-circle,#custom-circle2,#custom-circle7,#custom-circle8 {
+	background: @base;
+	color: @surface0;
+	font-size: 22px;
+	margin: 5px 0;
+}
+
+#custom-circle3 {
+	background: @surface0;
+	color: @surface1;	
+	font-size: 22px;
+}
+
+#custom-circle4,#custom-circle5 {
+	background: @surface1;
+	color: @blue;
+	font-size: 22px;
+}
+
+#custom-circle6 {
+	background: @surface0;
+	color: @surface1;
+	font-size: 22px;
+}
+
+#workspaces {
+	background: @surface0;
+	margin: 4px 0;
+}
+
+#workspaces button {
+    background: transparent;
+	border-radius: 4px;
+    color: @overlay1;
+    margin: 4px 2px;
+	min-width: 18px;
+    padding: 0px;
+    padding-right: 5px;
+}
+
+#workspaces button.active {
+	background: transparent;
+    color: @blue;
+}
+
+#workspaces button.urgent {
+    background: transparent;
+    color: @red;
+}
+
+#tray menu {
+    background: @base;
+    border: 2px solid @surface0;
+    border-radius: 8px;
+	font-size: 10px;
+    padding: 6px;
+}
+
+#tray menu menuitem {
+    background: transparent;
+	border-radius: 6px;
+    color: @text;
+	margin: 2px 0;
+    padding: 6px 10px;
+}
+
+#tray menu menuitem:hover {
+    background: transparent;
+    color: @blue;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: @mantle;
+}
+
+#taskbar {
+	background: @surface0;
+}
+
+#taskbar button {
+	padding: 0 5px;
+}
+
+#custom-updates.updated,#pulseaudio,#clock,#disk,#custom-system-infos,#network,#custom-power {
+	color: @text;	
+}
+
+#clock {
+	background: @surface1;
+}
+
+#pulseaudio {
+	background: @surface1;
+}
+
+#pulseaudio.muted {
+    color: @red;
+}
+
+#custom-updates {
+	background: @surface0;
+	font-size: 18px;
+}
+
+#custom-updates.has-updates {
+	color: @green;
+}
+
+#disk {
+	background: @surface0;
+}
+
+#disk.warning span {
+	color: @peach;	
+}
+
+#disk.critical span {
+	color: @red;	
+}
+
+#custom-system-infos {
+	background: @surface0;
+	padding-left: 8px;
+	padding-right: 6px;
+}
+
+#network {
+	background: @surface0;
+	padding-left: 8px;
+	padding-right: 5px;
+}
+
+#custom-power {
+	background: @surface0;
+	padding-left: 8px;
+	padding-right: 5px;
+}
+
+#workspaces,#custom-updates,#pulseaudio,#custom-menu,#clock,#disk,#custom-system-infos,#network,
+#custom-power {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}

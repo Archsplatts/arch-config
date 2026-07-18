@@ -1,0 +1,31 @@
+{
+	"cpu": {
+		"interval": 10,
+		"format": "<span color='#89b4fa'></span>  {usage}%",
+		"on-click": "foot --hold btop",
+		"tooltip": false	
+	},
+
+	"memory": {
+		"interval": 10,
+		"format": "<span color='#b4befe'></span>  {percentage}%",
+		"max-length": 10,
+		"on-click": "foot --hold btop",
+		"tooltip": false
+	},
+
+	 "temperature": {
+			"hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon2/temp1_input",
+            "critical-threshold": 90,
+            "interval": 10,
+            "format": "<span color='#74c7ec'>{icon}</span> {temperatureC}°",
+            "format-icons": ["", "", "", "", ""],
+            "tooltip": false,
+    },
+
+    "group/monitor": {
+    	"orientation": "horizontal",
+    	"modules": ["cpu","memory","temperature"]
+    }
+		
+}	

@@ -1,0 +1,5 @@
+#!/bin/bash
+pkill -SIGHUP waybar
+sleep 0.5
+pkill waybar
+waybar -c ~/.config/mango/waybar/config.jsonc -s ~/.config/mango/waybar/style.css > /dev/null 2>&1 &
