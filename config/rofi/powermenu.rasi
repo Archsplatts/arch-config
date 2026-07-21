@@ -5,10 +5,10 @@ configuration {
 }
 
 window {
-	background-color: 	rgba(36,39,58,0.96); 
-	border:           	2px; 
+	background-color: 	rgba(30,30,46,0.95); 
+	border:           	3px; 
 	border-color:     	@blue;
-	border-radius:	  	18;
+	border-radius:	  	8px;
 	padding: 			20px;
 	transparency:       "real";
     width:            	340px;              
