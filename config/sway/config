@@ -1,5 +1,4 @@
-# --- Variables --- #
-
+# Variables
 set $mod Mod4
 set $term foot
 set $menu rofi -modes "drun,run" -show drun -config ~/.config/rofi/applications-menu.rasi
@@ -7,20 +6,17 @@ set $filemanager thunar
 set $web brave-origin
 set $texteditor geany
 
-# --- Output configuration --- #
-
+# Output configuration
 output HDMI-A-1 resolution 1920x1080 position 0,0
 output * bg ~/Images/Wallpapers/koi.jpg fill
 
-# --- Input configuration --- #
-
+# Input configuration
 input type:keyboard { 
 	xkb_layout "fr" 
 	xkb_numlock enabled 
 }
 
-# --- Bar --- #
-
+# Bar
 bar { 
 swaybar_command waybar 
 }
