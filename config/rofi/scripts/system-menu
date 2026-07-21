@@ -1,41 +1,65 @@
 #!/bin/bash
 
-options="󰚰  Chercher des mises à jour\n󰮯  Mise à jour miroirs et système\n󱧖  Supprimer les paquets orphelins\n󰃢 Nettoyer le cache de pacman\n  Générer les listes de paquets\n  Vérifier les erreurs\n  Git clone Archsplatts\n Sauvegarde Timeshift"
+# Afficher le menu et capturer la sélection
+selection=$(echo -e "󰊠 Mettre le système à jour\n󰮯 Nettoyer le cache de pacman\n Gérer les paquets orphelins\n󰓅 Rafraichir les miroirs\n󰣇 Mises à jour AUR\n󰁯 Sauvegarde Timeshift" | rofi -dmenu -config ~/.config/rofi/system-menu.rasi)
 
-selection=$(echo -e "$options" | rofi -dmenu -config ~/.config/rofi/system-menu.rasi)
-
+# Vérifier si une sélection a été faite
 if [[ -n "$selection" ]]; then
     case "$selection" in
-        "󰚰  Chercher des mises à jour")
-            foot sh -c "checkupdates; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+        "󰊠 Mettre le système à jour")
+            foot sh -c '
+                updates=$(checkupdates 2>/dev/null)
+                if [[ -z "$updates" ]]; then
+                    echo "Votre système est à jour."
+                else
+                    echo "Mises à jour disponibles :"
+                    echo "$updates"
+                    echo ""
+                    read -p "Voulez-vous installer ces mises à jour ? (o/N) : " confirm
+                    if [[ "$confirm" =~ ^[Oo]$ ]]; then
+                        sudo pacman -Syu --noconfirm
+                        pkill -SIGRTMIN+1 waybar || true
+                        echo "Mises à jour terminées."
+                    else
+                        echo "Opération annulée."
+                    fi
+                fi
+                echo ""
+                read -n 1 -s -p "Appuyez sur une touche pour quitter..."
+            '
             ;;
-        "󰮯  Mise à jour miroirs et système")
-            foot sh -c "sudo reflector --country France,Germany --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose && sudo pacman -Syyu && yay -Syua; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
+        "󰮯 Nettoyer le cache de pacman")
+            foot sh -c "sudo pacman -Sc || true; echo; read -n 1 -s -p 'Appuyez sur une touche pour quitter...'"
             ;;
-        "󱧖  Supprimer les paquets orphelins")
-               orphans=$(pacman -Qdtq 2>/dev/null)
-            if [[ -n "$orphans" ]]; then
-                # Si la liste n'est pas vide, on lance la suppression
-                foot sh -c "sudo pacman -Rns \$($0 -c \"echo '$orphans'\"); echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
-            else
-                # Sinon, on affiche un message d'information
-                foot sh -c "echo 'Aucun paquet orphelin trouvé.'; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
-            fi
+        " Gérer les paquets orphelins")
+            foot sh -c '
+                orphans=$(pacman -Qdtq 2>/dev/null)
+                if [[ -z "$orphans" ]]; then
+                    echo "Aucun paquet orphelin trouvé."
+                else
+                    echo "Paquets orphelins trouvés :"
+                    echo "$orphans"
+                    echo ""
+                    read -p "Voulez-vous les supprimer ? (o/N) : " confirm
+                    if [[ "$confirm" =~ ^[Oo]$ ]]; then
+                        echo "$orphans" | sudo pacman -Rs --noconfirm -
+                        echo "Nettoyage terminé."
+                    else
+                        echo "Opération annulée."
+                    fi
+                fi
+                echo ""
+                read -n 1 -s -p "Appuyez sur une touche pour quitter..."
+            '
             ;;
-        "󰃢 Nettoyer le cache de pacman")
-            foot sh -c "sudo pacman -Sc; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
-            ;;
-        "  Générer les listes de paquets")
-            foot sh -c "pacman -Qqe > ~/Info/ExpList && pacman -Qq > ~/Info/PkgList; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
-            ;;
-        "  Vérifier les erreurs")
-            foot sh -c "journalctl -p 3 -xb; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
-            ;;
-        "  Git clone Archsplatts")
-            foot sh -c "git clone https://github.com/Archsplatts/config; echo ''; read -p 'Appuyez sur Entrée pour fermer...'"
-            ;;
-        " Sauvegarde Timeshift")
-			foot sh -c "sudo timeshift --create"
+        "󰓅 Rafraichir les miroirs")
+        	foot sh -c "sudo reflector --country France,Germany --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose|| true; echo; read -n 1 -s -p 'Appuyez sur une touche pour quitter...'"
 			;;
+		"󰣇 Mises à jour AUR")
+			foot sh -c "yay -Syua|| true;  echo; read -n 1 -s -p 'Appuyez sur une touche pour quitter...'"
+			;;
+        "󰁯 Sauvegarde Timeshift")
+            foot sh -c "sudo timeshift --create || true; echo; read -n 1 -s -p 'Appuyez sur une touche pour quitter...'"
+            ;;
     esac
 fi   
