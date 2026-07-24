@@ -3,16 +3,17 @@ export EDITOR="micro"
 export MICRO_TRUECOLOR=1
 
 ## Pacman
+alias add="sudo pacman -S"
+alias aur="yay -Syua"
 alias cleancache="sudo pacman -Sc"
 alias cleanorphans="sudo pacman -Rs $(pacman -Qdtq)"
 alias info="pacman -Si"
-alias list="pacman -Qqe > ~/Info/exp-list && pacman -Qq > ~/Info/pkg-list"
+alias list="pacman -Qqe > ~/Documents/list"
 alias orphans="pacman -Qdtq"
 alias qi="pacman -Qi"
-alias rns="sudo pacman -Rns"
+alias remove="sudo pacman -Rns"
 alias search="pacman -Ss"
-alias syu="sudo pacman -Syu; pkill -SIGRTMIN+1 waybar"
-alias update="sudo pacman -Syyu && yay -Syua"
+alias update="sudo pacman -Syu; pkill -SIGRTMIN+1 waybar"
 
 ## Système
 alias cache="dust .cache"
