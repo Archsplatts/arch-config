@@ -7,10 +7,9 @@
 	"spacing": 0,
 	"reload_style_on_change": true,
 	
-	"modules-left": ["ext/workspaces","custom/circle"],
+	"modules-left": ["ext/workspaces"],
 
 	"modules-center": [
-		"custom/circle2",
 		"custom/updates",
 		"custom/circle3",
 		"pulseaudio",
@@ -19,11 +18,9 @@
 		"custom/circle5",
 		"clock",
 		"custom/circle6",
-		"disk#ssd",
-		"custom/circle7"],
+		"disk#ssd"],
 	
 	"modules-right": [
-		"custom/circle8",
 		"wlr/taskbar",
 		"tray",
  		"network"]
