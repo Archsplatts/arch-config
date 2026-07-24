@@ -2,7 +2,7 @@
 	"pulseaudio": {
     	"format": "<span color='#a6e3a1'>{icon}</span> {volume}%",
     	"format-bluetooth": "{icon}",
-    	"format-muted": "󰕿",
+    	"format-muted": "\u00A0󰕿\u00A0",
     	"format-icons": {
         	"alsa_output.pci-0000_00_1f.3.analog-stereo": "",
         	"alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
