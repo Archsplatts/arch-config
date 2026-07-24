@@ -6,8 +6,8 @@
 		"icon": true,
     	"signal": 1, 
     	"format-icons": {
-        	"has-updates": "󰚽",
-        	"updated": "\u00A0󰝬\u00A0\u00A0"
+        	"has-updates": "\u00A0󰊠\u00A0\u00A0",
+        	"updated": "\u00A0󰊠\u00A0\u00A0"
     },
     	"exec": "$HOME/.config/mango/waybar/scripts/checkupdates",
 		"on-click": "foot -e sudo pacman -Syu; pkill -SIGRTMIN+1 waybar",
