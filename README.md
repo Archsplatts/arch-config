@@ -10,7 +10,7 @@ Gestionnaire de connexion: sddm
 
 Barre d'état: waybar <br> 
 Lanceur: rofi <br> 
-Gestion des fenêtres: sway,autotiling <br> 
+Gestion des fenêtres: mango,sway,autotiling <br> 
 Notifications: mako <br> 
 Indicateur: swayosd
 
