@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Afficher le menu et capturer la sélection
+selection=$(echo -e " Dwindle\n Tile\n Scroller\n Center Tile\n Vertical Tile\n Right Tile\n Vertical Scroller" | rofi -dmenu -config ~/.config/rofi/layouts.rasi)
+
+# Vérifier si une sélection a été faite
+if [[ -n "$selection" ]]; then
+    # Conversion du nom affiché vers le nom technique
+    layout_name=""
+    case "$selection" in
+        " Dwindle") layout_name="dwindle" ;;
+        " Tile") layout_name="tile" ;;
+        #"Monocle") layout_name="monocle" ;;
+        #"Grid") layout_name="grid" ;;
+        " Scroller") layout_name="scroller" ;;
+        " Center Tile") layout_name="center_tile" ;;
+        " Vertical Tile") layout_name="vertical_tile" ;;
+        " Right Tile") layout_name="right_tile" ;;
+        " Vertical Scroller") layout_name="vertical_scroller" ;;
+        #"Vertical Grid") layout_name="vertical_grid" ;;
+        #"Vertical Deck") layout_name="vertical_deck" ;;
+        #"Fair") layout_name="fair" ;;
+        #"Vertical Fair") layout_name="vertical_fair" ;;
+    esac
+
+    if [[ -n "$layout_name" ]]; then
+        # Commande correcte pour changer le layout
+        mmsg dispatch setlayout,"$layout_name"
+        
+        # Afficher la notification
+        notify-send "Layout Mango changé" "Le layout est maintenant : $selection"
+    fi
+fi
