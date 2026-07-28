@@ -1,0 +1,239 @@
+#!/bin/bash
+
+set -euo pipefail
+
+VERT='\033[0;32m'
+JAUNE='\033[1;33m'
+NC='\033[0m'
+
+echo -e "${VERT}                                   ▄▄                    ${NC}"
+echo -e "${VERT}                  █▄                ██       █▄  █▄      ${NC}"
+echo -e "${VERT}       ▄          ██                ██      ▄██▄▄██▄     ${NC}"
+echo -e "${VERT} ▄▀▀█▄ ████▄▄███▀ ████▄ ▄██▀█ ████▄ ██ ▄▀▀█▄ ██  ██ ▄██▀█${NC}"
+echo -e "${VERT} ▄█▀██ ██   ██    ██ ██ ▀███▄ ██ ██ ██ ▄█▀██ ██  ██ ▀███▄${NC}"
+echo -e "${VERT}▄▀█▄██▄█▀  ▄▀███▄▄██ ███▄▄██▀▄████▀▄██▄▀█▄██▄██ ▄███▄▄██▀${NC}"
+echo -e "${VERT}                              ██                         ${NC}"
+echo -e "${VERT}                              ▀                          ${NC}"
+
+echo -e "${JAUNE}Bienvenue dans le script de configuration Archsplatts !${NC}\n"
+
+echo -e "${JAUNE}(Veuillez activer le dépôt multilib avant de commencer)${NC}\n"
+
+if [ -t 0 ]; then
+    read -p "Appuyez sur Entrée pour continuer... "
+fi   
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[1/12] Mise à jour des miroirs${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+sudo pacman -S --needed --noconfirm reflector
+sudo reflector --country France,Germany --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[2/12] Installation des pilotes GPU${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+ PAQUETS_AMD=(
+	"lib32-mesa"
+	"lib32-vulkan-icd-loader"
+	"lib32-vulkan-radeon"
+	"mesa" 
+	"vulkan-icd-loader"
+	"vulkan-radeon"
+)
+ 
+sudo pacman -S --needed --noconfirm "${PAQUETS_AMD[@]}"
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[3/12] Installation de Sway${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+ PAQUETS_DE=(
+	"autotiling" 
+	"flameshot" 
+	"foot"
+	"gammastep" 
+	"grim"
+	"mako"
+	"pavucontrol"
+	"polkit" 
+	"polkit-gnome"  
+	"qt6-wayland"
+	"rofi" 
+	"sddm"
+	"slurp"
+	"sway"
+	"swaybg"
+	"swayidle"
+	"swaylock"
+	"thunar"
+	"thunar-archive-plugin"
+	"thunar-media-tags-plugin"
+	"thunar-volman"
+	"waybar"
+	"wl-clipboard"
+	"wl-clip-persist"
+	"wmenu"
+	"xdg-desktop-portal-gtk" 
+	"xdg-desktop-portal-wlr" 
+	"xorg-xwayland"
+)
+
+sudo pacman -S --needed --noconfirm "${PAQUETS_DE[@]}"
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[4/12] Installation des paquets multimedia${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+PAQUETS_MULTIMEDIA=(
+	"discord" 
+	"ffmpeg"
+	"ffmpegthumbnailer"
+	"firefox" 
+	"flac"
+	"gamemode" 
+	"gst-libav"
+	"gst-plugins-bad"
+	"gst-plugins-base" 
+	"gst-plugins-good" 
+	"gst-plugins-ugly"
+	"lib32-flac"
+	"lib32-gamemode"
+	"lib32-mangohud" 
+	"mangohud"
+	"mpv"
+	"qbittorrent"
+	"rhythmbox"
+	"steam" 
+	"thunderbird" 
+)
+
+sudo pacman -S --needed --noconfirm "${PAQUETS_MULTIMEDIA[@]}"
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[5/12] Installation des utilitaires${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+PAQUETS_UTILS=(
+	"7zip" 
+	"arch-wiki-docs"
+	"base-devel"
+	"bat" 
+	"btop" 
+	"calcurse"
+	"chafa" 
+	"cliphist"
+	"cpupower" 
+	"dust" 
+	"fastfetch" 
+	"galculator"
+	"geany" 
+	"git"
+	"gvfs"
+	"gvfs-mtp" 
+	"imagemagick" 
+	"impression" 
+	"lact" 
+	"micro" 
+	"nwg-displays"
+	"nwg-look"
+	"pacman-contrib" 
+	"realtime-privileges" 
+	"ristretto"
+ 	"starship"
+ 	"termdown"
+	"timeshift" 
+	"trash-cli" 
+	"tumbler"
+	"ufw" 
+	"unzip"
+	"wev"
+	"wget" 
+	"xarchiver"
+	"yazi" 
+	"zathura"
+	"zathura-pdf-mupdf"
+	"zip"
+	"zsh"
+	"zsh-autosuggestions" 
+	"zsh-syntax-highlighting"
+)
+
+sudo pacman -S --needed --noconfirm "${PAQUETS_UTILS[@]}"
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[6/12] Installation des thèmes & polices${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+PAQUETS_THEMES=(
+	"breeze-cursors" 
+	"noto-fonts"
+	"noto-fonts-cjk"
+	"noto-fonts-emoji"
+	"noto-fonts-extra"
+	"papirus-icon-theme" 
+	"ttf-nerd-fonts-symbols"
+	"ttf-nerd-fonts-symbols-common"
+	"ttf-ubuntu-font-family" 
+	"ttf-ubuntu-mono-nerd"
+)
+
+sudo pacman -S --needed --noconfirm "${PAQUETS_THEMES[@]}"
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[7/12] Installation de yay (AUR Helper)${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay -S brave-origin-bin mangowm-git
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[8/12] Activation des services système${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+sudo ufw enable
+sudo systemctl enable --now ufw.service
+sudo systemctl enable --now lactd.service
+sudo systemctl enable sddm
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[9/12] Configuration du shell${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+chsh -s /bin/zsh
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[10/12] Ajout de l'utilisateur aux groupes${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+usermod -aG audio,input,gamemode,realtime,render,video "$USER"
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[11/12] Copie des dotfiles${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+mkdir -p ~/.config
+mkdir -p ~/.scripts
+cd ~/arch-config
+cp -r config/* ~/.config
+cp -r appearance/* ~/.scripts
+cp zshrc ~/.zshrc
+
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${JAUNE}[12/12] Catppuccin papirus folders${NC}"
+echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
+
+git clone https://github.com/catppuccin/papirus-folders.git
+cd papirus-folders
+sudo cp -r src/* /usr/share/icons/Papirus
+chmod u+x ~/.scripts/papirus-folders
+~/.scripts/papirus-folders -C cat-mocha-blue
+
+echo -e "${VERT}╔════════════════════════════════════════╗${NC}"
+echo -e "${VERT}║  Installation terminée avec succès !   ║${NC}"
+echo -e "${VERT}╚════════════════════════════════════════╝${NC}\n"
+
+echo -e "${JAUNE}⚠ Veuillez redémarrer votre système pour appliquer tous les changements.${NC}\n"
