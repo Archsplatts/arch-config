@@ -1,0 +1,10 @@
+{
+	"network": {
+	    "interface": "enp42s0",
+	    "format-ethernet": "󰈀\u00A0",
+	    "format-disconnected": "󰈂",
+	    "tooltip-format-ethernet": "Connecté",
+	    "tooltip-format-disconnected": "Deconnecté",
+	    "on-click": "nm-connection-editor"
+	}   
+}

@@ -1,0 +1,44 @@
+{
+	"custom/circle": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle2": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle3": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle4": {
+		"format": "",
+		"on-click": "rofi -show drun -config $HOME/.config/rofi/waybar-menu.rasi",
+		"tooltip": false
+	}, 
+	
+	"custom/circle5": {
+		"format": "",
+		"on-click": "rofi -show drun -config $HOME/.config/rofi/waybar-menu.rasi",
+		"tooltip": false
+	},
+
+	"custom/circle6": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle7": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle8": {
+			"format": "",
+			"tooltip": false
+	}
+
+}

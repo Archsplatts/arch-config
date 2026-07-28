@@ -1,0 +1,8 @@
+{
+	"cpu": {
+		"interval": 10,
+		"format": "<span color='#89b4fa'></span>  {usage}%",
+		"on-click": "foot --hold btop",
+		"tooltip": false	
+	}
+}	
