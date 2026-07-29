@@ -221,6 +221,8 @@ cp -r appearance/* ~/.scripts
 cp zshrc ~/.zshrc
 cp koi.jpg ~/Images/Wallpapers/koi.jpg
 chmod u+x ~/.config/mango/autostart.sh
+chmod u+x ~/.config/mango/scripts/*
+chmod u+x ~/.config/mango/waybar/scripts/*
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[11/11] Catppuccin papirus folders${NC}"
