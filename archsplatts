@@ -223,6 +223,7 @@ cp koi.jpg $HOME/Images/Wallpapers/koi.jpg
 chmod u+x $HOME/.config/mango/autostart.sh
 chmod u+x $HOME/.config/mango/scripts/*
 chmod u+x $HOME/.config/mango/waybar/scripts/*
+chmod u+x $HOME/.config/rofi/scripts/*
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[11/11] Catppuccin papirus folders${NC}"
