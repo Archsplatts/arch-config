@@ -24,14 +24,14 @@ if [ -t 0 ]; then
 fi   
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[1/12] Mise à jour des miroirs${NC}"
+echo -e "${JAUNE}[1/11] Mise à jour des miroirs${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 sudo pacman -S --needed --noconfirm reflector
 sudo reflector --country France,Germany --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[2/12] Installation des pilotes GPU${NC}"
+echo -e "${JAUNE}[2/11] Installation des pilotes GPU${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
  PAQUETS_AMD=(
@@ -46,7 +46,7 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 sudo pacman -S --needed --noconfirm "${PAQUETS_AMD[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[3/12] Installation de Sway${NC}"
+echo -e "${JAUNE}[3/11] Installation de Sway${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
  PAQUETS_DE=(
@@ -83,7 +83,7 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 sudo pacman -S --needed --noconfirm "${PAQUETS_DE[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[4/12] Installation des paquets multimedia${NC}"
+echo -e "${JAUNE}[4/11] Installation des paquets multimedia${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 PAQUETS_MULTIMEDIA=(
@@ -114,7 +114,7 @@ PAQUETS_MULTIMEDIA=(
 sudo pacman -S --needed --noconfirm "${PAQUETS_MULTIMEDIA[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[5/12] Installation des utilitaires${NC}"
+echo -e "${JAUNE}[5/11] Installation des utilitaires${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 PAQUETS_UTILS=(
@@ -167,13 +167,12 @@ PAQUETS_UTILS=(
 sudo pacman -S --needed --noconfirm "${PAQUETS_UTILS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[6/12] Installation des thèmes & polices${NC}"
+echo -e "${JAUNE}[6/11] Installation des thèmes & polices${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 PAQUETS_THEMES=(
 	"breeze-cursors" 
 	"noto-fonts"
-	"noto-fonts-cjk"
 	"noto-fonts-emoji"
 	"noto-fonts-extra"
 	"papirus-icon-theme" 
@@ -186,7 +185,7 @@ PAQUETS_THEMES=(
 sudo pacman -S --needed --noconfirm "${PAQUETS_THEMES[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[7/12] Installation de yay (AUR Helper)${NC}"
+echo -e "${JAUNE}[7/11] Installation de yay (AUR Helper)${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 git clone https://aur.archlinux.org/yay.git
@@ -195,7 +194,7 @@ makepkg -si
 yay -S brave-origin-bin mangowm-git
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[8/12] Activation des services système${NC}"
+echo -e "${JAUNE}[8/11] Activation des services système${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 sudo ufw enable
@@ -204,30 +203,27 @@ sudo systemctl enable --now lactd.service
 sudo systemctl enable sddm
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[9/12] Configuration du shell${NC}"
+echo -e "${JAUNE}[9/11] Configuration du shell${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 chsh -s /bin/zsh
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[10/12] Ajout de l'utilisateur aux groupes${NC}"
-echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
-
-usermod -aG audio,input,gamemode,realtime,render,video "$USER"
-
-echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[11/12] Copie des dotfiles${NC}"
+echo -e "${JAUNE}[10/11] Copie des dotfiles${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 mkdir -p ~/.config
 mkdir -p ~/.scripts
+mkdir -p ~/Images/Wallpapers
 cd ~/arch-config
 cp -r config/* ~/.config
 cp -r appearance/* ~/.scripts
 cp zshrc ~/.zshrc
+cp koi.jpg ~/Images/Wallpapers/koi.jpg
+chmod u+x ~/.config/mango/autostart.sh
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[12/12] Catppuccin papirus folders${NC}"
+echo -e "${JAUNE}[11/11] Catppuccin papirus folders${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 git clone https://github.com/catppuccin/papirus-folders.git
