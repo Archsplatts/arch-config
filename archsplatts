@@ -212,17 +212,17 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 echo -e "${JAUNE}[10/11] Copie des dotfiles${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
-mkdir -p ~/.config
-mkdir -p ~/.scripts
-mkdir -p ~/Images/Wallpapers
-cd ~/arch-config
-cp -r config/* ~/.config
-cp -r appearance/* ~/.scripts
-cp zshrc ~/.zshrc
-cp koi.jpg ~/Images/Wallpapers/koi.jpg
-chmod u+x ~/.config/mango/autostart.sh
-chmod u+x ~/.config/mango/scripts/*
-chmod u+x ~/.config/mango/waybar/scripts/*
+mkdir -p $HOME/.config
+mkdir -p $HOME/.scripts
+mkdir -p $HOME/Images/Wallpapers
+cd $HOME/arch-config
+cp -r config/* $HOME/.config
+cp -r appearance/* $HOME/.scripts
+cp zshrc $HOME/.zshrc
+cp koi.jpg $HOME/Images/Wallpapers/koi.jpg
+chmod u+x $HOME/.config/mango/autostart.sh
+chmod u+x $HOME/.config/mango/scripts/*
+chmod u+x $HOME/.config/mango/waybar/scripts/*
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[11/11] Catppuccin papirus folders${NC}"
@@ -231,8 +231,8 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 git clone https://github.com/catppuccin/papirus-folders.git
 cd papirus-folders
 sudo cp -r src/* /usr/share/icons/Papirus
-chmod u+x ~/.scripts/papirus-folders
-~/.scripts/papirus-folders -C cat-mocha-blue
+chmod u+x $HOME/.scripts/papirus-folders
+$HOME/.scripts/papirus-folders -C cat-mocha-blue
 
 echo -e "${VERT}╔════════════════════════════════════════╗${NC}"
 echo -e "${VERT}║  Installation terminée avec succès !   ║${NC}"
