@@ -1,4 +1,4 @@
-Script post installation ArchLinux avec une configuration Sway
+Script post installation ArchLinux avec une configuration Mango
 
 ![script](script-preview.png)
 
