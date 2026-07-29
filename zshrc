@@ -32,10 +32,10 @@ alias fm="yazi"
 alias pfc="$HOME/.scripts/papirus-folders -C"
 alias pfl="$HOME/.scripts/papirus-folders -l"
 alias window="mmsg get all-clients"
-alias wipe="cliphist wipe && rm -r ~/.cache/cliphist/db"
+alias wipe="cliphist wipe && rm -r $HOME/.cache/cliphist/db"
 
 ## History file for zsh
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
