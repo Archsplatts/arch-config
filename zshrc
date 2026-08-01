@@ -2,7 +2,7 @@ export BAT_THEME="Catppuccin Mocha"
 export EDITOR="micro"
 export MICRO_TRUECOLOR=1
 
-## Pacman
+## 󰮯  Pacman
 alias add="sudo pacman -S"
 alias aur="yay -Syua"
 alias cleancache="sudo pacman -Sc"
@@ -15,7 +15,7 @@ alias remove="sudo pacman -Rns"
 alias search="pacman -Ss"
 alias update="sudo pacman -Syu; pkill -SIGRTMIN+1 waybar"
 
-## Système
+##   Système
 alias cache="dust $HOME/.cache"
 alias cleantemp="sudo rm -rf /var/cache/pacman/pkg/download-*"
 alias conf="yazi .config"
@@ -24,7 +24,7 @@ alias mirrors="sudo reflector --country France,Germany --latest 5 --age 12 --pro
 alias rm="trash -v"
 alias zshrc="micro $HOME/.zshrc && source $HOME/.zshrc"
 
-## Utilitaires
+##   Utilitaires
 alias c="clear"
 alias cdt="cd $HOME/Téléchargements"
 alias ff="fastfetch"
@@ -35,7 +35,7 @@ alias window="mmsg get all-clients"
 alias wipe="cliphist wipe && rm -r $HOME/.cache/cliphist/db"
 
 ## History file for zsh
-HISTFILE=$HOME/.zsh_history
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
