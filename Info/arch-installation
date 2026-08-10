@@ -1,0 +1,61 @@
+loadkeysfr
+
+setfont ter-132b
+
+timedatectl
+
+cfdisk
+/dev/sda1 1G EFI
+/dev/sda2 ext4
+
+fdisk -l
+
+mkfs.ext4 /dev/sda2
+mkfs.fat -F 32 /dev/sda1
+
+mount /dev/sda2 /mnt
+mount --mkdir /dev/sda1 /mnt/boot
+
+pactsrap -K /mnt base linux-lts linux-firmware 
+micro networkmanager reflector sudo
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt
+
+ln -sf /usr/share/zoneinfo/Europe/paris /etc/localtime
+
+hwclock --systohc
+
+micro /etc/locale.gen
+locale-gen
+
+micro /etc/locale.conf
+LANG=fr_FR.UTF-8
+
+micro /etc/vconsole.conf
+KEYMAP=fr-latin1
+
+micro /etc/hostname
+MS-7C56
+
+mkinitcpio -P
+
+pacman -S grub efibootmgr
+
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+passwd
+
+useradd -m -G wheel bloodsplatts
+passwd bloodsplatts
+
+systemctl enable NetworkManager
+
+exit
+
+umount -R /mnt
+
+reboot
