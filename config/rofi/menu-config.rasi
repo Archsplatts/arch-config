@@ -10,7 +10,7 @@ window {
 	modi: 				"drun,run";
 	show-icons: 		true;
 	icon-theme: 		"Papirus";
-	background-color:  	rgba(30, 30, 46, 0.90);
+	background-color:  	rgba(30, 30, 46, 0.95);
 	transparency:		"real";
 	border-radius:	  	8px;
     padding:          	14;
@@ -32,7 +32,7 @@ listview {
 	border: 	0; 
 	columns:  	1;
 	flow: 		vertical;
-    lines:    	10;
+    lines:    	8;
 	scrollbar:	false;  
     spacing:  	14px;         
 }
