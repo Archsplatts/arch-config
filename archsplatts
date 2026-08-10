@@ -215,6 +215,7 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 mkdir -p $HOME/.config
 mkdir -p $HOME/.scripts
 mkdir -p $HOME/Images/Wallpapers
+mkdir -p $HOME/.local/share/themes
 cd $HOME/arch-config
 cp -r config/* $HOME/.config
 cp -r appearance/* $HOME/.scripts
