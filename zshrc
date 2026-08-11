@@ -21,6 +21,7 @@ alias conf="yazi .config"
 alias error="journalctl -p 3 -xb"
 alias mirrors="sudo reflector --country France,Germany --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
 alias rm="trash -v"
+alias sv="systemctl list-unit-files --state=enabled"
 alias zshrc="micro $HOME/.zshrc && source $HOME/.zshrc"
 
 ##   Utilitaires
