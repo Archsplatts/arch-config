@@ -1,4 +1,5 @@
 export BAT_THEME="Catppuccin Mocha"
+export DIFFPROG=meld
 export EDITOR="micro"
 export MICRO_TRUECOLOR=1
 
@@ -29,6 +30,8 @@ alias c="clear"
 alias cdt="cd $HOME/Téléchargements"
 alias ff="fastfetch"
 alias fm="yazi"
+alias ls="eza --icons -1 --group-directories-first"
+alias pd="pacdiff"
 alias pfc="$HOME/.scripts/papirus-folders -C"
 alias pfl="$HOME/.scripts/papirus-folders -l"
 alias window="mmsg get all-clients"
