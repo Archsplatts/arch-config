@@ -2,7 +2,7 @@
    	"custom/updates": {
     	"format": "{icon}",
     	"return-type": "json",
-    	"interval": 3600,
+    	"interval": 21600,
 		"icon": true,
     	"signal": 1, 
     	"format-icons": {
