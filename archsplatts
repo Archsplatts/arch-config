@@ -24,7 +24,7 @@ if [ -t 0 ]; then
 fi   
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[1/11] Mise à jour des miroirs${NC}"
+echo -e "${JAUNE}[1/10] Mise à jour des miroirs${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 sudo pacman -S --needed --noconfirm reflector
@@ -32,7 +32,7 @@ sudo reflector --country France,Germany --latest 5 --age 12 --protocol https --s
 sudo pacman -Syyu
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[2/11] Installation des pilotes GPU${NC}"
+echo -e "${JAUNE}[2/10] Installation des pilotes GPU${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
  AMD_PKGS=(
@@ -47,7 +47,7 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 sudo pacman -S --needed --noconfirm "${AMD_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[3/11] Installation de Sway${NC}"
+echo -e "${JAUNE}[3/10] Installation de Sway${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
  DE_PKGS=(
@@ -84,7 +84,7 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 sudo pacman -S --needed --noconfirm "${DE_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[4/11] Installation des paquets multimedia${NC}"
+echo -e "${JAUNE}[4/10] Installation des paquets multimedia${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 MULTIMEDIA_PKGS=(
@@ -115,7 +115,7 @@ MULTIMEDIA_PKGS=(
 sudo pacman -S --needed --noconfirm "${MULTIMEDIA_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[5/11] Installation des utilitaires${NC}"
+echo -e "${JAUNE}[5/10] Installation des utilitaires${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 UTILS_PKGS=(
@@ -168,7 +168,7 @@ UTILS_PKGS=(
 sudo pacman -S --needed --noconfirm "${UTILS_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[6/11] Installation des thèmes & polices${NC}"
+echo -e "${JAUNE}[6/10] Installation des thèmes & polices${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 THEMES_PKGS=(
@@ -186,7 +186,7 @@ THEMES_PKGS=(
 sudo pacman -S --needed --noconfirm "${THEMES_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[7/11] Installation de yay (AUR Helper)${NC}"
+echo -e "${JAUNE}[7/10] Installation de yay (AUR Helper)${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 git clone https://aur.archlinux.org/yay.git
@@ -195,7 +195,7 @@ makepkg -si
 yay -S brave-origin-bin mangowm
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[8/11] Activation des services système${NC}"
+echo -e "${JAUNE}[8/10] Activation des services & shell  ${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 sudo ufw enable
@@ -203,14 +203,10 @@ sudo systemctl enable --now ufw.service
 sudo systemctl enable --now lactd.service
 sudo systemctl enable sddm
 
-echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[9/11] Configuration du shell${NC}"
-echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
-
 chsh -s /bin/zsh
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[10/11] Copie des dotfiles${NC}"
+echo -e "${JAUNE}[9/10] Copie des dotfiles${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 mkdir -p $HOME/.config
@@ -228,7 +224,7 @@ chmod u+x $HOME/.config/mango/waybar/scripts/*
 chmod u+x $HOME/.config/rofi/scripts/*
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[11/11] Catppuccin papirus folders${NC}"
+echo -e "${JAUNE}[10/10] Catppuccin papirus folders${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 git clone https://github.com/catppuccin/papirus-folders.git
