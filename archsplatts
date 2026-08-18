@@ -34,7 +34,7 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 echo -e "${JAUNE}[2/11] Installation des pilotes GPU${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
- PAQUETS_AMD=(
+ AMD_PKGS=(
 	"lib32-mesa"
 	"lib32-vulkan-icd-loader"
 	"lib32-vulkan-radeon"
@@ -43,13 +43,13 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 	"vulkan-radeon"
 )
  
-sudo pacman -S --needed --noconfirm "${PAQUETS_AMD[@]}"
+sudo pacman -S --needed --noconfirm "${AMD_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[3/11] Installation de Sway${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
- PAQUETS_DE=(
+ DE_PKGS=(
 	"autotiling" 
 	"flameshot" 
 	"foot"
@@ -80,13 +80,13 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 	"xorg-xwayland"
 )
 
-sudo pacman -S --needed --noconfirm "${PAQUETS_DE[@]}"
+sudo pacman -S --needed --noconfirm "${DE_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[4/11] Installation des paquets multimedia${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
-PAQUETS_MULTIMEDIA=(
+MULTIMEDIA_PKGS=(
 	"audacity"
 	"discord" 
 	"ffmpegthumbnailer"
@@ -111,13 +111,13 @@ PAQUETS_MULTIMEDIA=(
 	"webkit2gtk-4.1"
 )
 
-sudo pacman -S --needed --noconfirm "${PAQUETS_MULTIMEDIA[@]}"
+sudo pacman -S --needed --noconfirm "${MULTIMEDIA_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[5/11] Installation des utilitaires${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
-PAQUETS_UTILS=(
+UTILS_PKGS=(
 	"arch-wiki-docs"
 	"base-devel"
 	"bat" 
@@ -164,13 +164,13 @@ PAQUETS_UTILS=(
 	"zsh-syntax-highlighting"
 )
 
-sudo pacman -S --needed --noconfirm "${PAQUETS_UTILS[@]}"
+sudo pacman -S --needed --noconfirm "${UTILS_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[6/11] Installation des thèmes & polices${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
-PAQUETS_THEMES=(
+THEMES_PKGS=(
 	"breeze-cursors" 
 	"noto-fonts"
 	"noto-fonts-emoji"
@@ -182,7 +182,7 @@ PAQUETS_THEMES=(
 	"ttf-ubuntu-mono-nerd"
 )
 
-sudo pacman -S --needed --noconfirm "${PAQUETS_THEMES[@]}"
+sudo pacman -S --needed --noconfirm "${THEMES_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[7/11] Installation de yay (AUR Helper)${NC}"
@@ -191,7 +191,7 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-yay -S brave-origin-bin mangowm-git
+yay -S brave-origin-bin mangowm
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[8/11] Activation des services système${NC}"
