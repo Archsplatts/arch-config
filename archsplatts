@@ -15,7 +15,7 @@ echo -e "${VERT}▄▀█▄██▄█▀  ▄▀███▄▄██ ██�
 echo -e "${VERT}                              ██                         ${NC}"
 echo -e "${VERT}                              ▀                          ${NC}"
 
-echo -e "${JAUNE}Bienvenue dans le script de configuration Archsplatts !${NC}\n"
+echo -e "${JAUNE}Bienvenue dans le script de configuration Archsplatts!${NC}\n"
 
 echo -e "${JAUNE}(Veuillez activer le dépôt multilib avant de commencer)${NC}\n"
 
