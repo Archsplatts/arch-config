@@ -18,6 +18,7 @@ echo
 
 echo -e "${JAUNE}>>> Nettoyage du cache de pacman...${NC}"
 paccache -rvk3
+paccache -ruk0
 echo
 
 echo -e "${JAUNE}=== Maintenance terminée ===${NC}"
