@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -euo pipefail 
+
+JAUNE='\033[1;33m'
+NC='\033[0m'
+
+echo -e "${JAUNE}=== Script de maintenance Arch linux ===${NC}"
+echo
+
+echo -e "${JAUNE}>>> Recherche de paquets orphelins...${NC}"
+pacman -Qdtq || echo "Aucun paquet orphelin trouvé."
+echo
+
+echo -e "${JAUNE}>>> Recherche de fichiers pacnew...${NC}"
+pacdiff || echo "Aucun fichier pacnew trouvé."
+echo
+
+echo -e "${JAUNE}>>> Nettoyage du cache de pacman...${NC}"
+paccache -rvk3
+echo
+
+echo -e "${JAUNE}=== Maintenance terminée ===${NC}"
