@@ -1,0 +1,14 @@
+{
+  "Transparent": false,
+  "Accent": "89b4fa",
+  "Title": "89dceb",
+  "SearchBar": "313244",
+  "PackagelistSourceRepository": "a6e3a1",
+  "PackagelistSourceAUR": "89b4fa",
+  "PackagelistHeader": "f9e2af",
+  "SettingsFieldBackground": "45475a",
+  "SettingsFieldText": "cdd6f4",
+  "SettingsFieldLabel": "f9e2af",
+  "SettingsDropdownNotSelected": "585b70",
+  "StylePKGBUILD": "catppuccin-mocha"
+}   
