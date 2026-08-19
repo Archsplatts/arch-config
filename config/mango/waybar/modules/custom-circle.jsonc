@@ -16,13 +16,13 @@
 
 	"custom/circle4": {
 		"format": "",
-		"on-click": "rofi -show drun -config $HOME/.config/rofi/waybar-menu.rasi",
+		"on-click": "rofi -show drun -config $HOME/.config/rofi/gnome-menu.rasi",
 		"tooltip": false
 	}, 
 	
 	"custom/circle5": {
 		"format": "",
-		"on-click": "rofi -show drun -config $HOME/.config/rofi/waybar-menu.rasi",
+		"on-click": "rofi -show drun -config $HOME/.config/rofi/gnome-menu.rasi",
 		"tooltip": false
 	},
 
