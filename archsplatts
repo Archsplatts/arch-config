@@ -192,7 +192,7 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-yay -S brave-origin-bin mangowm
+yay -S brave-origin-bin mangowm pacseek
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[8/10] Activation des services & shell  ${NC}"
