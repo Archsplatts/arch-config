@@ -1,6 +1,6 @@
 {
    	"custom/updates": {
-    	"format": "{icon}",
+    	"format": "{0}{icon}",
     	"return-type": "json",
     	"interval": 21600,
 		"icon": true,
