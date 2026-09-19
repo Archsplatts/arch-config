@@ -6,6 +6,9 @@ configuration {
     display-drun:               "";
 	drun-display-format:        "{name}";
 	font: "UbuntuNerd Font Regular 12";
+	hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
 }
 
 window {
