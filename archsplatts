@@ -126,6 +126,7 @@ UTILS_PKGS=(
 	"eza"
 	"fastfetch" 
 	"galculator"
+	"gnome-disk-utility"
 	"gvfs"
 	"gvfs-mtp" 
 	"hyprpicker"
