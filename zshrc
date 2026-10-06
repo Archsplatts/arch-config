@@ -19,10 +19,9 @@ alias del="sudo pacman -Rns"
 alias list="pacman -Qqe > $HOME/Documents/list"
 alias orphans="pacman -Qdtq"
 alias qi="pacman -Qi"
-alias qm="pacman -Qm"
 alias search="pacman -Ss"
 alias si="pacman -Si"
-alias update="yay -Syu; pkill -SIGRTMIN+1 waybar"
+alias update="sudo pacman -Syu"
 
 ##   Système
 alias ct="sudo rm -rf /var/cache/pacman/pkg/download-*"
