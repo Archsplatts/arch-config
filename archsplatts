@@ -139,6 +139,7 @@ UTILS_PKGS=(
 	"man-pages"
 	"man-pages-fr"
 	"micro" 
+	"mousepad"
 	"nm-connection-editor"
 	"nwg-displays"
 	"nwg-look"
