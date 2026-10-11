@@ -1,0 +1,20 @@
+{
+	"disk#ssd": {
+		"interval": 60,
+		"format": "<span color='#94e2d5'>󰋊</span> {percentage_used}%",
+		"warning": 70,
+		"critical": 80,
+		"tooltip": false,
+		"on-click": "foot --hold dust"
+	},
+
+	"disk#hdd": {
+		"interval": 60,
+			"format": "<span color='#fab387'>󰋊 HDD</span> {percentage_used}%",
+			"warning": 70,
+			"critical": 80,
+			"tooltip": false,
+			"on-click": "thunar /run/media/bloodsplatts/ToshibaExt4",
+		"path": "/run/media/bloodsplatts/ToshibaExt4"
+	}
+}

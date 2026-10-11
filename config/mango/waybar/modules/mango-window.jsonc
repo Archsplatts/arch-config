@@ -1,0 +1,8 @@
+{
+	"mango/window": {
+    	"format": "{}",
+    	"icon": true,
+    	"icon-size": 20,
+    	"max-length": 35
+	}
+}	

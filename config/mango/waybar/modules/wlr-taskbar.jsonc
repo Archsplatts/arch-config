@@ -1,0 +1,10 @@
+{
+	"wlr/taskbar": {
+    	"format": "{icon}",
+    	"icon-size": 16,
+    	"tooltip": false,
+    	"on-click": "activate",
+    	"on-click-middle": "close",
+    	"ignore-list": ["discord", "steam","foot","nm-connection-editor" ]
+	}
+}	

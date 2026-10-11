@@ -1,0 +1,16 @@
+{
+   	"custom/updates": {
+    	"format": "{0}{icon}",
+    	"return-type": "json",
+    	"interval": 21600,
+		"icon": true,
+    	"signal": 1, 
+    	"format-icons": {
+        	"has-updates": "\u00A0󰊠\u00A0\u00A0",
+        	"updated": "\u00A0󰊠\u00A0\u00A0"
+    },
+    	"exec": "$HOME/.config/mango/waybar/scripts/checkupdates",
+		"on-click": "foot -e pacseek",
+    	"on-click-right": "$HOME/.config/waybar/scripts/checkupdates; pkill -SIGRTMIN+1 waybar"
+	}
+}	
