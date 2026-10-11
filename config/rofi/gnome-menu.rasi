@@ -5,6 +5,7 @@ configuration {
     show-icons:                 true;
 	icon-theme:          	"Papirus-Dark";
     display-drun:               "";
+	disable-history:     	true;	
 	drun-display-format:        "{name}";
 	font: "UbuntuNerd Font Regular 12";
 	hover-select: true;
