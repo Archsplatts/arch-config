@@ -1,7 +1,7 @@
 #!/bin/bash
 
 options="Ask Brave\0icon\x1fgnome-robots
-Movix\0icon\x1fcom.github.artemanufrij.playmyvideos
+Movix\0icon\x1fphotofilmstrip
 ProtonDB\0icon\x1fdistributor-logo-steamos
 Twitch\0icon\x1ftwitch-indicator
 Wiki\0icon\x1fdistributor-logo-archlinux
