@@ -199,6 +199,7 @@ echo -e "${JAUNE}[8/9] Copie des dotfiles${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 mkdir -p $HOME/.config
+mkdir -p $HOME/.local/share/applications
 mkdir -p $HOME/.scripts
 mkdir -p $HOME/Images/Wallpapers
 mkdir -p $HOME/.local/share/themes
