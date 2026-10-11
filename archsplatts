@@ -205,8 +205,9 @@ mkdir -p $HOME/.scripts
 mkdir -p $HOME/Images/Wallpapers
 mkdir -p $HOME/.local/share/themes
 cd $HOME/arch-config
-cp -r config/* $HOME/.config
-cp -r appearance/* $HOME/.scripts
+cp -r applications/* $HOME/.local/share/applications/
+cp -r config/* $HOME/.config/
+cp -r appearance/* $HOME/.scripts/
 cp zshrc $HOME/.zshrc
 cp koi.jpg $HOME/Images/Wallpapers/koi.jpg
 chmod u+x $HOME/.config/mango/autostart.sh
