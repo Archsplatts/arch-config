@@ -3,7 +3,7 @@ export DIFFPROG=meld
 export EDITOR="micro"
 export MICRO_TRUECOLOR=1
 
-##   Flatpak
+#   FLATPAK
 alias fpi="flatpak install"
 alias fpd="flatpak uninstall --delete-data"
 alias fpl="flatpak list"
@@ -12,7 +12,7 @@ alias fpo="flatpak uninstall --unused"
 alias fps="flatpak search"
 alias fpu="flatpak update"
 
-## 󰮯  Pacman
+# 󰮯  PACMAN
 alias add="sudo pacman -S --noconfirm"
 alias co="sudo pacman -Rs $(pacman -Qdtq)"
 alias del="sudo pacman -Rns"
@@ -23,7 +23,7 @@ alias search="pacman -Ss"
 alias si="pacman -Si"
 alias update="sudo pacman -Syu"
 
-##   Système
+#   SYSTEM
 alias ct="sudo rm -rf /var/cache/pacman/pkg/download-*"
 alias error="journalctl -p 3 -xb"
 alias mirrors="sudo reflector --country France,Germany --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
@@ -31,7 +31,7 @@ alias rm="trash -v"
 alias svl="systemctl list-unit-files --state=enabled"
 alias zshrc="micro $HOME/.zshrc && source $HOME/.zshrc"
 
-##   Utilitaires
+#   UTILS
 alias c="clear"
 alias cdt="cd $HOME/Téléchargements"
 alias ff="fastfetch"
