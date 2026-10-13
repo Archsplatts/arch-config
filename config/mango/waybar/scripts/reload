@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 pkill -SIGHUP waybar
 sleep 0.5
 pkill waybar
