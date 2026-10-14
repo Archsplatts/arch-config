@@ -118,7 +118,6 @@ echo -e "${JAUNE}[5/9] Installation des utilitaires${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 UTILS_PKGS=(
-	"android-tools"
 	"arch-wiki-docs"
 	"bat" 
 	"btop" 
