@@ -225,6 +225,8 @@ cd papirus-folders
 sudo cp -r src/* /usr/share/icons/Papirus
 chmod u+x $HOME/.scripts/papirus-folders
 $HOME/.scripts/papirus-folders -C cat-mocha-blue
+cd ~
+rm -rf papirus-folders
 
 echo -e "${VERT}╔════════════════════════════════════════╗${NC}"
 echo -e "${VERT}║  Installation terminée avec succès !   ║${NC}"
