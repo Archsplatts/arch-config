@@ -166,6 +166,7 @@ UTILS_PKGS=(
 )
 
 sudo pacman -S --needed --noconfirm "${UTILS_PKGS[@]}"
+chsh -s /bin/zsh
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[6/9] Installation des thèmes & polices${NC}"
@@ -186,15 +187,13 @@ THEMES_PKGS=(
 sudo pacman -S --needed --noconfirm "${THEMES_PKGS[@]}"
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${JAUNE}[7/9] Activation des services & shell  ${NC}"
+echo -e "${JAUNE}[7/9] Activation des services${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 sudo ufw enable
 sudo systemctl enable --now ufw.service
 sudo systemctl enable --now lactd.service
 sudo systemctl enable sddm
-
-chsh -s /bin/zsh
 
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${JAUNE}[8/9] Copie des dotfiles${NC}"
