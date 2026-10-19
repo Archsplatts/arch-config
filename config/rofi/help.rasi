@@ -9,10 +9,8 @@ window {
 	transparency:		"real";
 	border:           	3px;
 	border-color:		@blue;
-	border-radius:	  	8px;
-	location:         	west;
-	margin: 			0px 0px 0px 8px;	    
-    width:            	350px;        
+	border-radius:	  	8px;    
+    width:            	25%;        
 }
 
 mainbox {
@@ -22,7 +20,7 @@ mainbox {
 listview {
 	border: 	0; 
 	columns:  	1;
-    lines:    	22;
+    lines:    	13;
  	padding:  	2px 0px 0px;
 	scrollbar:	false;
     spacing:  	6px;    
