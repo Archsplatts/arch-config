@@ -86,7 +86,6 @@ echo -e "${JAUNE}[4/9] Installation des paquets multimedia${NC}"
 echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 MULTIMEDIA_PKGS=(
-	"discord" 
 	"ffmpegthumbnailer"
 	"firefox" 
 	"flac"
