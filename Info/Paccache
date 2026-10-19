@@ -30,5 +30,5 @@ Met à jour sur place les sommes de contrôle 			updpkgsums
 dans un PKGBUILD
 
 # paccache.timer
-	sudo systemctl enable paccache.timer
+sudo systemctl enable paccache.timer
 /etc/conf.d/pacman-contrib
