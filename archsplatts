@@ -137,6 +137,7 @@ UTILS_PKGS=(
 	"man-db"
 	"man-pages"
 	"man-pages-fr"
+	"meld"
 	"micro" 
 	"mousepad"
 	"nm-connection-editor"
