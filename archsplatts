@@ -153,6 +153,7 @@ UTILS_PKGS=(
 	"tumbler"
 	"ufw" 
 	"unzip"
+	"vim"
 	"wev"
 	"wget" 
 	"xarchiver"
