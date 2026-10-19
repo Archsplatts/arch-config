@@ -7,13 +7,13 @@ selection=$(echo -e " Mettre à jour\n Maintenance\n󰣇 Lire les news Arc
 if [[ -n "$selection" ]]; then
     case "$selection" in
 		" Mettre à jour")
-			foot sh -c "yay -Syu || true; echo; read -n 1 -s -p 'Appuyez sur une touche pour quitter...'"
+			foot sh -c "sudo pacman -Syu || true; echo; read -n 1 -s -p 'Appuyez sur une touche pour quitter...'"
 			;;
     	" Maintenance")
     		foot sh -c "$HOME/.scripts/maintenance || true; echo; read -n 1 -s -p 'Appuyez sur une touche pour quitter...'"
             ;;
 		"󰣇 Lire les news Archlinux")
-			brave-origin "https://archlinux.org"
+			flatpak run com.brave.Browser "https://archlinux.org"
 			;;
         "󰓅 Rafraichir les miroirs")
         	foot sh -c "sudo reflector --country France,Germany --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose|| true; echo; read -n 1 -s -p 'Appuyez sur une touche pour quitter...'"
