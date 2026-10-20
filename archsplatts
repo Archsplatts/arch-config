@@ -211,8 +211,6 @@ cp -r scripts/* $HOME/.scripts/
 cp zshrc $HOME/.zshrc
 cp koi.jpg $HOME/Images/Wallpapers/koi.jpg
 chmod u+x $HOME/.config/mango/autostart.sh
-chmod u+x $HOME/.config/mango/scripts/*
-chmod u+x $HOME/.config/mango/waybar/scripts/*
 chmod u+x $HOME/.config/rofi/scripts/*
 chmod u+x $HOME/.scripts/*
 
