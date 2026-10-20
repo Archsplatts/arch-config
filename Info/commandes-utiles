@@ -1,6 +1,9 @@
 # Créer une clé usb bootable
 sudo dd bs=4M if=/chemin/vers/fichier.iso of=/chemin/vers/usb status=progress && sync
 
+# 󰈀
+ip link show
+
 ## 󰓓  
 gamemoderun MANGOHUD=1 %command%
 
