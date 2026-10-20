@@ -202,11 +202,13 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 mkdir -p $HOME/.config
 mkdir -p $HOME/.local/share/applications
 mkdir -p $HOME/.scripts
+mkdir -p $HOME/Documents/Infos
 mkdir -p $HOME/Images/Wallpapers
 mkdir -p $HOME/.local/share/themes
 cd $HOME/arch-config
 cp -r applications/* $HOME/.local/share/applications/
 cp -r config/* $HOME/.config/
+cp -r Info/* $HOME/Documents/Infos/
 cp -r scripts/* $HOME/.scripts/
 cp zshrc $HOME/.zshrc
 cp koi.jpg $HOME/Images/Wallpapers/koi.jpg
@@ -223,8 +225,7 @@ cd papirus-folders
 sudo cp -r src/* /usr/share/icons/Papirus
 chmod u+x $HOME/.scripts/papirus-folders
 $HOME/.scripts/papirus-folders -C cat-mocha-blue
-cd ~
-rm -rf papirus-folders
+rm -rf $HOME/arch-config
 
 echo -e "${VERT}╔════════════════════════════════════════╗${NC}"
 echo -e "${VERT}║  Installation terminée avec succès !   ║${NC}"
