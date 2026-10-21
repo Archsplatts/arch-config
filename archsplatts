@@ -143,6 +143,7 @@ UTILS_PKGS=(
 	"nwg-displays"
 	"nwg-look"
 	"pacman-contrib" 
+	"poppler"
 	"realtime-privileges" 
 	"ristretto"
  	"starship"
