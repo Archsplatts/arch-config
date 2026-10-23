@@ -5,7 +5,11 @@
     	"tooltip": false,
     	"on-click": "activate",
     	"on-click-middle": "close",
-    	"ignore-list": ["discord","steam","foot","org.qbittorrent.qBittorrent",
+    	"ignore-list": [
+			"discord",
+			"foot",
+			"steam",	
+			"org.qbittorrent.qBittorrent",
 			"xfce-polkit"]
 	}
 }	
