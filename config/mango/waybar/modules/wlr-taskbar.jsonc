@@ -8,8 +8,8 @@
     	"ignore-list": [
 			"discord",
 			"foot",
-			"steam",	
 			"org.qbittorrent.qBittorrent",
+			"steam",				
 			"xfce-polkit"]
 	}
 }	
