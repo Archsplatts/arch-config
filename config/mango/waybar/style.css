@@ -130,6 +130,7 @@ label:focus {
 }
 
 #taskbar button {
+	color: @text;
 	padding: 0 5px;
 }
 
