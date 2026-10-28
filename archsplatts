@@ -206,13 +206,12 @@ mkdir -p $HOME/.scripts
 mkdir -p $HOME/Documents/Infos
 mkdir -p $HOME/Images/Wallpapers
 mkdir -p $HOME/.local/share/themes
-cd $HOME/arch-config
-cp -r applications/* $HOME/.local/share/applications/
-cp -r config/* $HOME/.config/
-cp -r Info/* $HOME/Documents/Infos/
-cp -r scripts/* $HOME/.scripts/
-cp zshrc $HOME/.zshrc
-cp koi.jpg $HOME/Images/Wallpapers/koi.jpg
+cp -r $HOME/arch-config/applications/* $HOME/.local/share/applications/
+cp -r $HOME/arch-config/config/* $HOME/.config/
+cp -r $HOME/arch-config/Info/* $HOME/Documents/Infos/
+cp -r $HOME/arch-config/scripts/* $HOME/.scripts/
+cp $HOME/arch-config/zshrc $HOME/.zshrc
+cp $HOME/arch-config/koi.jpg $HOME/Images/Wallpapers/koi.jpg
 chmod u+x $HOME/.config/mango/autostart.sh
 chmod u+x $HOME/.config/rofi/scripts/*
 chmod u+x $HOME/.scripts/*
