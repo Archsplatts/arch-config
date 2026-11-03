@@ -224,8 +224,8 @@ git clone https://github.com/catppuccin/papirus-folders.git
 cd papirus-folders
 sudo cp -r src/* /usr/share/icons/Papirus
 chmod u+x "$HOME/.scripts/papirus-folders"
-$HOME/.scripts/papirus-folders -C cat-mocha-blue
-rm -rf $HOME/arch-config
+"$HOME/.scripts/papirus-folders" -C cat-mocha-blue
+rm -rf "$HOME/arch-config"
 
 echo -e "${VERT}╔════════════════════════════════════════╗${NC}"
 echo -e "${VERT}║  Installation terminée avec succès !   ║${NC}"
