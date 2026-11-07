@@ -24,13 +24,13 @@
             "keyColor": "green"
         },
         {
-            "type": "disk",
-            "key": "├─󰋊 ",
-            "keyColor": "green"
-        },
-        {
             "type": "memory",
             "key": "├─ ",
+            "keyColor": "green"
+        },
+		{
+            "type": "disk",
+            "key": "├─󰋊 ",
             "keyColor": "green"
         },
         {
@@ -41,8 +41,7 @@
         {
             "type": "sound",
             "key": "╰─󰕾 ",
-            "keyColor": "green",
-            "format": "Air 192 4 Pro"
+            "keyColor": "green"
         },
         {
           "type": "custom",
@@ -111,7 +110,6 @@
 		{
 		  "type": "custom",
 		  "format": "\u001b[90m└────────────────────────────────────────────┘"
-		},
-        "break",
+		}
     ]
 }
