@@ -13,7 +13,6 @@ alias update="sudo pacman -Syu"
 
 #   SYSTEM
 alias ct="sudo rm -rf /var/cache/pacman/pkg/download-*"
-alias error="journalctl -p 3 -xb"
 alias mirrors="sudo reflector --country France,Germany --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose"
 alias rm="trash -v"
 alias svl="systemctl list-unit-files --state=enabled"
