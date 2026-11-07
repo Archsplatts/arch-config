@@ -9,9 +9,7 @@ alias co="sudo pacman -Rs $(pacman -Qdtq)"
 alias del="sudo pacman -Rns"
 alias list="pacman -Qqe > $HOME/Documents/list"
 alias orphans="pacman -Qdtq"
-alias qi="pacman -Qi"
 alias search="pacman -Ss"
-alias si="pacman -Si"
 alias update="sudo pacman -Syu"
 
 #   SYSTEM
