@@ -4,7 +4,7 @@ export EDITOR="micro"
 export MICRO_TRUECOLOR=1
 
 # 󰮯  PACMAN
-alias add="sudo pacman -S --noconfirm"
+alias add="sudo pacman -S --needed --noconfirm"
 alias clean="pacman -Qtdq | sudo pacman -Rns -"   
 alias del="sudo pacman -Rns"
 alias list="pacman -Qqe > $HOME/Documents/list"
