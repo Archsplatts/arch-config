@@ -3,15 +3,6 @@ export DIFFPROG=meld
 export EDITOR="micro"
 export MICRO_TRUECOLOR=1
 
-#   FLATPAK
-alias fpi="flatpak install"
-alias fpd="flatpak uninstall --delete-data"
-alias fpl="flatpak list"
-alias fpm="flatpak mask"
-alias fpo="flatpak uninstall --unused"
-alias fps="flatpak search"
-alias fpu="flatpak update"
-
 # 󰮯  PACMAN
 alias add="sudo pacman -S --noconfirm"
 alias co="sudo pacman -Rs $(pacman -Qdtq)"
