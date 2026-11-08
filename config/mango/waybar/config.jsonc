@@ -2,26 +2,21 @@
 	"include": ["$HOME/.config/mango/waybar/modules/*.jsonc"],
 
 	"layer": "top",
-	"position": "top",
-	"height": 30,
+	"position": "bottom",
+	"height": 32,
 	"spacing": 0,
 	"reload_style_on_change": true,
 	
-	"modules-left": ["ext/workspaces"],
+	"modules-left": [ 
+		"mango/layout",
+		"wlr/taskbar" ],
 
-	"modules-center": [
-		"custom/updates",
-		"custom/circle3",
-		"pulseaudio",
-		"custom/circle4",
-		"custom/menu",
-		"custom/circle5",
-		"clock",
-		"custom/circle6",
-		"disk#ssd"],
+	"modules-center": ["mango/workspaces" ],
 	
 	"modules-right": [
-		"wlr/taskbar",
+		"custom/updates",
 		"tray",
- 		"network"]
+		"pulseaudio",
+		"network",
+		"clock" ]
 }
