@@ -2,12 +2,12 @@
    	"custom/updates": {
     	"format": "{0}{icon}",
     	"return-type": "json",
-    	"interval": 21600,
+    	"interval": 7200,
 		"icon": true,
     	"signal": 1, 
     	"format-icons": {
-        	"has-updates": "\u00A0󰊠\u00A0\u00A0",
-        	"updated": "\u00A0󰊠\u00A0\u00A0"
+        	"has-updates": "\u00A0",
+        	"updated": ""
     },
     	"exec": "$HOME/.scripts/checkupdates",
 		"on-click": "$HOME/.scripts/update",
