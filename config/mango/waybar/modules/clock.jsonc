@@ -17,6 +17,6 @@
 	    },
 		"interval": 60,
 		"timezone": "Europe/Paris",
-		"on-click": "foot calcurse"
+		"on-click": "foot -e calcurse"
 	}   
 }	
