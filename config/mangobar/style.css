@@ -26,90 +26,54 @@
 @define-color crust #11111b;
 
 * {
-    font-family: "UbuntuMono Nerd Font";
+    font-family: UbuntuMono Nerd Font;
     font-size: 16px;
     font-weight: bold;
-}
-
-#bar {
     background: @base;
 }
 
 #tags {
-    background: none;
+    border-radius: 4px;
     color: @overlay1;
     margin: 4px 2px;
     min-width: 18px;
-    padding: 0 5px;
+    padding: 0px;
+    padding-right: 5px;
 }
 
 #tags.active {
-    background: none;
     color: @blue;
 }
 
 #tags.urgent {
-    background: none;
     color: @red;
-}
-
-#custom-updates {
-    background: none;
-    font-size: 16px;
-    padding-left: 15px;
 }
 
 #custom-updates.has-updates {
     color: @green;
 }
 
-#tray {
-    background: @surface0;
-    padding: 0 8px;
-}
-
 #volume {
-    background: none;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 11px;
 }
 
 #volume.muted {
     color: @red;
-    font-size: 20px;
-    padding: 0 19px;
 }
 
 #network {
-    background: none;
-    padding-left: 8px;
-    padding-right: 5px;
+    padding-left: 6px;
+    padding-right: 4px;
 }   
 
-#clock {
-    background: none;
+#tags,#custom-updates,#tray,#volume,#network,#clock {
+	background: @base;
 }
 
-menu {
-    background: @base;
-    border-color: @surface0;
-    border-radius: 8px;
-    font-size: 10px;
-    padding: 6px;
-}
-
-menuitem {
-    background: none;
-    border-radius: 6px;
-    color: @text;
-    margin: 2px 0;
-    padding: 6px 10px;
-}
-
-menuitem:hover {
-    background: none;
-    color: @blue;
-}
-
-#custom-updates,#volume,#network,#clock {
+#custom-updates,#tray,#volume,#network,#clock {
+	border-radius: 0;
 	color: @subtext1;
 	padding: 0 5px;
 }
