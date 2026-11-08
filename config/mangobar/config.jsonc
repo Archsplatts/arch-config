@@ -1,0 +1,64 @@
+{
+	"layer": "top",
+	"height": 32,
+	
+	"modules-left": [],
+
+ 	"modules-center": ["workspaces"],
+
+	"modules-right": [
+		"custom/updates",
+		"tray",
+		"pulseaudio",
+		"network",
+		"clock#time"
+	],
+
+	"layout": {
+	    "format": "{}"
+	},
+
+	"workspaces": {
+	    "pinned": [1, 2, 3],
+	    "tag-names": ["I", "II", "III"],
+	},
+
+	"custom/updates": {
+	    "exec": "$HOME/.config/mangobar/scripts/checkupdates",
+	    "interval": 3600,
+	    "signal": 8,
+	    "format": "",
+	    "on-click": "~/.scripts/update"
+	},
+
+	"tray": {
+    	"icon-size": 18,
+    	"spacing": 8
+	},
+	
+	"pulseaudio": {
+	    "format": "{icon} {bt}",
+	    "format-muted": " {volume}% {bt}",
+	    "icons": ["", "", "", "", "", "", "", ""],
+	    "icon-bluetooth": "󰂯",
+	    "scroll-step": 5,
+	    "max-volume": 100,
+	    "on-click": "pavucontrol"
+	},
+
+	"network": {
+	    "format": "{icon}",
+	    "format-wifi": "{signal} {ssid}",
+	    "format-disconnected": "{icon}",
+	    "icon-wifi": "󰖩",
+	    "icon-ethernet": "󰈀",
+	    "icon-disconnected": "󰖪",
+	    "signal-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+	    "on-click": "nm-connection-editor"
+	},
+
+	"clock#time": {
+	    "format": "{:L%H:%M}",
+	    "on-click": "foot -e calcurse"
+	}
+}
