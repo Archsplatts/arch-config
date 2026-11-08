@@ -1,5 +1,14 @@
 {
-	"include": ["$HOME/.config/mango/waybar/modules/*.jsonc"],
+	"include": [
+		"$HOME/.config/mango/waybar/modules/mango-layout.jsonc",
+		"$HOME/.config/mango/waybar/modules/wlr-taskbar.jsonc",
+		"$HOME/.config/mango/waybar/modules/workspaces.jsonc",
+		"$HOME/.config/mango/waybar/modules/custom-updates.jsonc",
+		"$HOME/.config/mango/waybar/modules/tray.jsonc",
+		"$HOME/.config/mango/waybar/modules/pulseaudio.jsonc",
+		"$HOME/.config/mango/waybar/modules/network.jsonc",
+		"$HOME/.config/mango/waybar/modules/clock.jsonc"
+	],
 
 	"layer": "top",
 	"position": "bottom",
@@ -7,11 +16,9 @@
 	"spacing": 0,
 	"reload_style_on_change": true,
 	
-	"modules-left": [ 
-		"mango/layout",
-		"wlr/taskbar" ],
+	"modules-left": ["wlr/taskbar"],
 
-	"modules-center": ["mango/workspaces" ],
+	"modules-center": ["mango/workspaces"],
 	
 	"modules-right": [
 		"custom/updates",
