@@ -37,11 +37,11 @@
 	},
 	
 	"pulseaudio": {
-	    "format": "{icon} {bt}",
-	    "format-muted": " {volume}% {bt}",
-	    "icons": ["", "", "", "", "", "", "", ""],
+	    "format": "{icon}",
+	    "format-muted": "\u00A0󰕿\u00A0",
+	    "icons": ["󰖀", "󰕾"],
 	    "icon-bluetooth": "󰂯",
-	    "scroll-step": 5,
+	    "scroll-step": 1,
 	    "max-volume": 100,
 	    "on-click": "pavucontrol"
 	},
@@ -51,7 +51,7 @@
 	    "format-wifi": "{signal} {ssid}",
 	    "format-disconnected": "{icon}",
 	    "icon-wifi": "󰖩",
-	    "icon-ethernet": "󰈀",
+	    "icon-ethernet": "󰈀\u00A0",
 	    "icon-disconnected": "󰖪",
 	    "signal-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 	    "on-click": "nm-connection-editor"
