@@ -1,7 +1,8 @@
 {
  	"clock": {
 		"locale": "fr_FR.UTF-8",
-		"format": "{:%H:%M}",
+		"justify": "center",
+		"format": "<span size='medium'>{0:%H:%M}</span>",
 		"tooltip-format": "{calendar}",
 		"tooltip-delay": 0, 
 	          "calendar": {
