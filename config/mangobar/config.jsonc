@@ -20,7 +20,7 @@
 
 	"workspaces": {
 	    "pinned": [1, 2, 3],
-	    "tag-names": ["I", "II", "III"],
+	    "tag-names": ["I", "II", "III"]
 	},
 
 	"custom/updates": {
