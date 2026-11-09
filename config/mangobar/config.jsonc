@@ -14,10 +14,6 @@
 		"clock#time"
 	],
 
-	"layout": {
-	    "format": "{}"
-	},
-
 	"workspaces": {
 	    "pinned": [1, 2, 3],
 	    "tag-names": ["I", "II", "III"]
