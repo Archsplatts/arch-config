@@ -13,7 +13,7 @@
 	                  "days": "<span color='#cdd6f4'><b>{}</b></span>",
 	  	              "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
 	                  "today": "<span color='#f5e0dc'><b><u>{}</u></b></span>"
-	          },
+	          }
 	    },
 		"interval": 60,
 		"timezone": "Europe/Paris",
