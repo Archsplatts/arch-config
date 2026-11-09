@@ -1,8 +1,8 @@
 {
-	"mango/window": {
-    	"format": "{}",
-    	"icon": true,
-    	"icon-size": 20,
-    	"max-length": 35
+"mango/window": {
+	"format": "{title}",
+	"icon": true,
+	"icon-size": 18,
+	"max-length": 35
 	}
-}	
+}
