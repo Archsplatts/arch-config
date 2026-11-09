@@ -28,7 +28,7 @@
 	    "interval": 3600,
 	    "signal": 8,
 	    "format": "",
-	    "on-click": "~/.scripts/update"
+	    "on-click": "$HOME/.scripts/update"
 	},
 
 	"tray": {
