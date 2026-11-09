@@ -20,7 +20,7 @@
             "interval": 10,
             "format": "<span color='#74c7ec'>{icon}</span> {temperatureC}°",
             "format-icons": ["", "", "", "", ""],
-            "tooltip": false,
+            "tooltip": false
     },
 
     "group/monitor": {
