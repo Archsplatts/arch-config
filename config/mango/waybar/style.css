@@ -27,9 +27,16 @@ window#waybar {
     padding-right: 5px;
 }
 
-#workspaces button.active {
-	background: transparent;
-    color: @blue;
+#workspaces button:nth-child(1).active {
+	color: @teal;
+}
+
+#workspaces button:nth-child(2).active {
+	color: @lavender;
+}
+
+#workspaces button:nth-child(3).active {
+	color: @blue;
 }
 
 #workspaces button.urgent {
