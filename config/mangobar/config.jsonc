@@ -2,9 +2,9 @@
 	"layer": "top",
 	"height": 32,
 	
-	"modules-left": [],
+	"modules-left": ["workspaces"],
 
- 	"modules-center": ["workspaces"],
+ 	"modules-center": ["window"],
 
 	"modules-right": [
 		"custom/updates",
@@ -16,7 +16,12 @@
 
 	"workspaces": {
 	    "pinned": [1, 2, 3],
-	    "tag-names": ["I", "II", "III"]
+	    "tag-names": ["  I", "  II", "  III"]
+	},
+
+	"window": {
+    	"format": "{}",
+    	"max-length": 500
 	},
 
 	"custom/updates": {
