@@ -24,6 +24,7 @@ alias ff="fastfetch"
 alias fm="yazi"
 alias ls="eza --icons --group-directories-first"
 alias rm="trash -v"
+alias theme="$HOME/.scripts/theme"
 alias window="mmsg get all-clients | jq ."
 alias wipe="cliphist wipe && rm -r $HOME/.cache/cliphist/db"
 
