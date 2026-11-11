@@ -23,7 +23,7 @@ window#waybar {
     color: @overlay1;
     margin: 4px 2px;
 	min-width: 18px;
-    padding: 0px;
+    padding: 0 5px;
     padding-right: 5px;
 }
 
