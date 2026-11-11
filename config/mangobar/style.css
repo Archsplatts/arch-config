@@ -1,16 +1,16 @@
-@import './color.css';
+@import './colors.css';
 
 * {
     font-family: "UbuntuMono Nerd Font";
-    font-size: 16px;
+	font-size: 20px;
     font-weight: bold;
-    background: none;
+    background: @base;
 }
 
 #tags {
+    background: @base;
     border-radius: 0px;
     color: @overlay1;
-    margin: 4px 2px;
     min-width: 18px;
     padding: 0 5px;
 }
@@ -23,11 +23,16 @@
     color: @red;
 }
 
+#custom-updates {
+	font-size: 16px;
+}
+
 #custom-updates.has-updates {
     color: @green;
 }
 
 #volume {
+	font-size: 20px;
     padding-left: 5px;
     padding-right: 11px;
 }
@@ -64,10 +69,6 @@
 #menuitem:hover {
     background: none;
     color: @blue;
-}
-
-#tags,#window,#custom-updates,#tray,#volume,#network,#clock {
-	background: none;
 }
 
 #title,#custom-updates,#tray,#volume,#network,#clock {
