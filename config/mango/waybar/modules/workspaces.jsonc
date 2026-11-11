@@ -3,9 +3,9 @@
 	 	"tag-filter": [1, 2, 3],
 	 	"format": "{icon}",
      	"format-icons": {
-        	"1": "I",
-        	"2": "II",
-        	"3": "III"
+        	"1": "  I",
+        	"2": "  II",
+        	"3": "  III"
      	}
 	}
 }	
