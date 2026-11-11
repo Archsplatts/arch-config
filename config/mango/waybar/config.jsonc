@@ -16,9 +16,9 @@
 	"spacing": 0,
 	"reload_style_on_change": true,
 	
-	"modules-left": ["wlr/taskbar"],
+	"modules-left": ["mango/workspaces"],
 
-	"modules-center": ["mango/workspaces"],
+	"modules-center": ["mango/window"],
 	
 	"modules-right": [
 		"custom/updates",
