@@ -7,7 +7,7 @@ export MICRO_TRUECOLOR=1
 alias add="sudo pacman -S --needed --noconfirm"
 alias clean="pacman -Qtdq | sudo pacman -Rns -"   
 alias del="sudo pacman -Rns"
-alias list="pacman -Qqe > $HOME/Documents/list"
+alias list="pacman -Qqe > $HOME/Documents/Notes/list"
 alias search="pacman -Ss"
 alias update="sudo pacman -Syu"
 
