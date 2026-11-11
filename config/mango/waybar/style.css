@@ -11,12 +11,6 @@ window#waybar {
     background: rgba(30,30,46,1);
 }
 
-#taskbar button {
-	color: @subtext1;
-	padding: 0 10px;
-	margin-left: 5px;
-}
-
 #workspaces button {
     background: transparent;
 	border-radius: 4px;
