@@ -198,16 +198,18 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 
 mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.local/share/applications"
+mkdir -p "$HOME/.local/share/themes"
 mkdir -p "$HOME/.scripts"
 mkdir -p "$HOME/Documents/Notes"
 mkdir -p "$HOME/Images/Wallpapers"
-mkdir -p "$HOME/.local/share/themes"
+
 cp -r "$HOME/arch-config/applications"/* "$HOME/.local/share/applications/"
 cp -r "$HOME/arch-config/config"/* "$HOME/.config/"
 cp -r "$HOME/arch-config/Notes"/* "$HOME/Documents/Notes/"
 cp -r "$HOME/arch-config/scripts"/* "$HOME/.scripts/"
-cp "$HOME/arch-config/zshrc" "$HOME/.zshrc"
 cp "$HOME/arch-config/koi.jpg" "$HOME/Images/Wallpapers/koi.jpg"
+cp "$HOME/arch-config/zshrc" "$HOME/.zshrc"
+
 chmod u+x "$HOME/.config/mango/autostart.sh"
 chmod u+x "$HOME/.config/rofi/scripts"/*
 chmod u+x "$HOME/.scripts"/*
@@ -221,6 +223,7 @@ cd papirus-folders
 sudo cp -r src/* /usr/share/icons/Papirus
 chmod u+x "$HOME/.scripts/papirus-folders"
 "$HOME/.scripts/papirus-folders" -C cat-mocha-blue
+
 rm -rf "$HOME/arch-config"
 
 echo -e "${VERT}╔════════════════════════════════════════╗${NC}"
