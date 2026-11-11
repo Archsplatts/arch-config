@@ -1,6 +1,6 @@
 {
 	"include": [
-		"$HOME/.config/mango/waybar/modules/window.jsonc",
+		"$HOME/.config/mango/waybar/modules/mango-window.jsonc",
 		"$HOME/.config/mango/waybar/modules/workspaces.jsonc",
 		"$HOME/.config/mango/waybar/modules/custom-updates.jsonc",
 		"$HOME/.config/mango/waybar/modules/tray.jsonc",
