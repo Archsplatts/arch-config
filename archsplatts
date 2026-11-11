@@ -140,7 +140,6 @@ UTILS_PKGS=(
 	"micro" 
 	"mousepad"
 	"nm-connection-editor"
-	"nwg-displays"
 	"nwg-look"
 	"pacman-contrib" 
 	"poppler"
