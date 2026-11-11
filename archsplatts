@@ -175,9 +175,6 @@ echo -e "${JAUNE}━━━━━━━━━━━━━━━━━━━━━
 
 THEMES_PKGS=(
 	"breeze-cursors" 
-	"noto-fonts"
-	"noto-fonts-emoji"
-	"noto-fonts-extra"
 	"papirus-icon-theme" 
 	"ttf-nerd-fonts-symbols"
 	"ttf-nerd-fonts-symbols-common"
