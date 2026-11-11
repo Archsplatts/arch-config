@@ -32,9 +32,10 @@
 
 	"custom/updates": {
 	    "exec": "$HOME/.config/mangobar/scripts/checkupdates",
+	   	"format": "",
+		"return-type": "json",
 	    "interval": 3600,
 	    "signal": 8,
-	    "format": "",
 	    "on-click": "$HOME/.scripts/update"
 	},
 
