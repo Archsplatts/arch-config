@@ -17,7 +17,7 @@
 
 	"workspaces": {
 	    "pinned": [1, 2, 3],
-	    "tag-names": ["  I", "  II", "  III"],
+	    "tag-names": ["", "", ""],
 		"on-click": "activate",
 		"on-click-right": "toggle",
 		"scroll-interval": 100,
