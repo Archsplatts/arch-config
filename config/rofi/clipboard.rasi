@@ -11,8 +11,10 @@
 configuration {
 	columns: 2;
     show-icons: true;             
-    font: "UbuntuNerd Font 12";               
-   
+    font: "UbuntuNerd Font 12";
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";    
 }
 
 dmenu {
