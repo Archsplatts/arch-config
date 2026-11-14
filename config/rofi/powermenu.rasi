@@ -52,7 +52,6 @@ mainbox {
     background-color: transparent;
     border-color: @selected;
     children: [ "listview" ];
-    enabled: true;
 }
 
 window {
