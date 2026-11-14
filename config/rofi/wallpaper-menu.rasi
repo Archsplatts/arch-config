@@ -26,7 +26,6 @@ element {
     border-color: @selected;
     border-radius: 8px;
     cursor: pointer;
-    enabled: true;
     margin: 0px;
     orientation: vertical;
     padding: 30px 10px;
@@ -65,7 +64,6 @@ entry {
     background-color: #1e1e2e;
     border-radius: 8px;
     cursor: text;
-    enabled: true;
     expand: false;
     padding: 15px 20px;
     placeholder: "Search...";
@@ -89,7 +87,6 @@ inputbar {
     border-color: @selected;
     border-radius: 0px;
     children: [ "prompt", "entry" ];
-    enabled: true;
     margin: 0px;
     padding: 0px;
     spacing: 20px;
@@ -105,7 +102,6 @@ listview {
     cursor: "default";
     cycle: true;
     dynamic: true;
-    enabled: true;
     fixed-columns: true;
     fixed-height: true;
     layout: vertical;
@@ -124,7 +120,6 @@ mainbox {
     border-color: @selected;
     border-radius: 0px 0px 0px 0px;
     children: [ "inputbar", "listview" ];
-    enabled: true;
     margin: 0px;
     padding: 42px;
     spacing: 20px;
@@ -133,7 +128,6 @@ mainbox {
 prompt {
     background-color: @selected;
     border-radius: 8px;
-    enabled: true;
     padding: 15px;
     text-color: @background;
 }
@@ -155,7 +149,6 @@ textbox {
 
 textbox-prompt-colon {
     background-color: inherit;
-    enabled: true;
     expand: false;
     str: "::";
     text-color: inherit;
@@ -168,7 +161,6 @@ window {
     border-color: @selected;
     border-radius: 8px;
     cursor: "default";
-    enabled: true;
     fullscreen: false;
     location: center;
     margin: 0px;
