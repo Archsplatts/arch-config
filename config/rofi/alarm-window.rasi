@@ -59,7 +59,6 @@ mainbox {
     border-color: @selected;
     border-radius: 0px;
     children: [ "listview" ];
-    enabled: true;
     margin: 0px;
     padding: 14px;
     spacing: 14px;
