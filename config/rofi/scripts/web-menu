@@ -1,0 +1,34 @@
+#!/bin/bash
+
+options="Ask Brave\0icon\x1fgnome-robots
+Movix\0icon\x1fphotofilmstrip
+ProtonDB\0icon\x1fdistributor-logo-steamos
+Twitch\0icon\x1ftwitch-indicator
+Wiki\0icon\x1fdistributor-logo-archlinux
+Youtube\0icon\x1fyoutube"
+
+selection=$(echo -e "$options" | rofi -dmenu -show-icons -icon-theme "Papirus" -config ~/.config/rofi/web-menu.rasi)
+
+if [[ -n "$selection" ]]; then
+    case "$selection" in
+
+   		"Ask Brave")
+   		   	firefox https://search.brave.com/ask 
+			;;
+		"Movix")
+			firefox https://movix.zip
+			;;
+        "ProtonDB")
+            firefox https://www.protondb.com
+            ;;
+		"Twitch")
+			firefox https://www.twitch.tv/directory
+            ;;
+        "Wiki")
+            firefox https://wiki.archlinux.org
+            ;;
+        "Youtube")                    
+            firefox https://www.youtube.com
+            ;; 
+    esac
+fi   

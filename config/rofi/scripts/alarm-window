@@ -1,0 +1,17 @@
+#!/bin/bash
+
+options="󰔛 05 min
+󰔛 10 min
+󰔛 15 min
+󰔛 20 min
+󰔛 25 min
+󰔛 30 min"
+
+selection=$(echo "$options" | rofi -dmenu -config ~/.config/rofi/alarm-window.rasi)
+
+if [[ -n "$selection" ]]; then
+   
+    duration=$(echo "$selection" | grep -o '[0-9]*')
+    
+    foot termdown -f standard "${duration}m" && notify-send -u critical "⏰ Le temps est écoulé" "Durée : ${duration} minutes"
+fi   

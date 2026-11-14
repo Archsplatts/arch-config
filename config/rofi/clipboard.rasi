@@ -1,0 +1,98 @@
+@theme "catppuccin-default"
+
+* {
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+    text-color: @text;
+}
+
+configuration {
+    columns: 2;
+    font: "UbuntuNerd Font 12";
+    hover-select: true;
+    me-accept-entry: "MousePrimary";
+    me-select-entry: "";
+    show-icons: true;
+}
+
+dmenu {
+    display-name: "Clipboard";
+}
+
+element {
+    background-color: inherit;
+    padding: 10px;
+}
+
+element alternate normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+element normal normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+element selected normal, element selected active {
+    background-color: inherit;
+    text-color: @blue;
+}
+
+entry {
+    placeholder: "Rechercher...";
+    placeholder-color: @overlay0;
+}
+
+inputbar {
+    background-color: @base;
+    border-radius: 8px;
+    children: [ prompt, entry ];
+    enabled: true;
+    padding: 8px 16px;
+    spacing: 8px;
+}
+
+listview {
+    background-color: transparent;
+    border: 0px;
+    columns: 1;
+    lines: 10;
+    scrollbar: false;
+}
+
+mainbox {
+    children: [ inputbar, mode-switcher, listview ];
+    padding: 14px;
+    spacing: 5px;
+}
+
+message {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 16px;
+    margin: 12px 0 0;
+}
+
+prompt {
+    enabled: true;
+    text-color: #cdd6f4;
+}
+
+textbox {
+    padding: 8px 24px;
+    text-color: @text;
+}
+
+window {
+    background-color: rgba(30,30,46,0.90);
+    border: 3px;
+    border-color: @blue;
+    border-radius: 8px;
+    location: center;
+    padding: 14px;
+    transparency: "real";
+    width: 600px;
+}   
