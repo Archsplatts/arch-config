@@ -37,8 +37,6 @@ element-icon {
 element-text {
     background-color: inherit;
     text-color: inherit;
-    /*horizontal-align: 0.5;
-    text-align:center;*/
 }
 
 inputbar {
@@ -59,7 +57,6 @@ mainbox {
     border-color: @selected;
     border-radius: 0px;
     children: [ "listview" ];
-    enabled: true;
     margin: 0px;
     padding: 14px;
     spacing: 14px;
