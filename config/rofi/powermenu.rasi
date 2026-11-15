@@ -6,7 +6,7 @@ configuration {
 
 element {
     height: 75px;
-    padding: 5px;
+    padding: 0 5px;
 }
 
 element alternate normal {
