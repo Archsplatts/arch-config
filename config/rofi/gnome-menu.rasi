@@ -10,7 +10,7 @@ configuration {
     levenshtein-sort: false;
     me-accept-entry: "MousePrimary";
     me-select-entry: "";
-    modi: "drun";
+    modes: "drun";
     show-icons: true;
     sort: true;
     sorting-method: "fzf";
