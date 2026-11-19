@@ -7,7 +7,6 @@ configuration {
     font: "UbuntuNerd Font Regular 12";
     hover-select: true;
     icon-theme: "Papirus-Dark";
-    levenshtein-sort: false;
     me-accept-entry: "MousePrimary";
     me-select-entry: "";
     modes: "drun";
