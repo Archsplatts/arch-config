@@ -16,7 +16,7 @@ configuration {
     hover-select: true;
     me-accept-entry: "MousePrimary";
     me-select-entry: "";
-    modi: "drun";
+    modes: "drun";
     show-icons: true;
 }
 
