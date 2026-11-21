@@ -16,13 +16,12 @@ window {
 	background-color:  	rgba(30,30,46,0.95);
 	transparency:		"real";
 	border-radius:	  	8px;
-    padding:          	14;
+    padding:          	14px;
     width:            	16%; 
 }
 
 mainbox {
     spacing:            14px;
-    margin:             0px;
     padding:            14px;
     border-radius:      0px;
     border-color:       @selected;
@@ -45,8 +44,8 @@ inputbar {
 
 element {
 	background-color:  	inherit;
-	padding:			10;
-	spacing:			10;
+	padding:			10px;
+	spacing:			10px;
 	text-color: 		@text;
 }
 
