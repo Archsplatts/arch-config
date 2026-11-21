@@ -70,7 +70,7 @@ window {
     border-color: @blue;
     border-radius: 8px;
     icon-theme: "Papirus";
-    modi: "drun";
+    modes: "drun";
     padding: 14;
     show-icons: true;
     transparency: "real";
