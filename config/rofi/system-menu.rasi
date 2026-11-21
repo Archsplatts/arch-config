@@ -10,7 +10,7 @@ configuration {
 window {
 	border:           	3px;
 	border-color:		@blue;
-	modi: 				"drun,run";
+	modes: 				"drun,run";
 	show-icons: 		true;
 	icon-theme: 		"Papirus";
 	background-color:  	rgba(30,30,46,0.95);
