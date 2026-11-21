@@ -2,9 +2,6 @@
 
 * {
     background-color: transparent;
-    margin: 0px;
-    padding: 0px;
-    spacing: 0px;
     text-color: @text;
 }
 
@@ -14,6 +11,7 @@ configuration {
     disable-history: true;
     drun-display-format: "{name}";
     font: "UbuntuNerd Font 13";
+    hover-select: true;
     icon-theme: "Papirus-Dark";
     modes: "drun,run";
     scroll-method: 0;
