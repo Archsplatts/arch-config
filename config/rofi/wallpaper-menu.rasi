@@ -26,7 +26,6 @@ element {
     border-color: @selected;
     border-radius: 8px;
     cursor: pointer;
-    margin: 0px;
     orientation: vertical;
     padding: 30px 10px;
     spacing: 20px;
@@ -155,18 +154,11 @@ textbox-prompt-colon {
 }
 
 window {
-    anchor: center;
     background-color: @background;
     border: 3px;
     border-color: @selected;
     border-radius: 8px;
     cursor: "default";
-    fullscreen: false;
-    location: center;
-    margin: 0px;
-    padding: 0px;
     transparency: "real";
     width: 80%;
-    x-offset: 0px;
-    y-offset: 0px;
 }   
