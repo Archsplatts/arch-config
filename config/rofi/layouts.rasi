@@ -68,7 +68,7 @@ window {
     border-color: @blue;
     border-radius: 8px;
     icon-theme: "Papirus";
-    modi: "drun,run";
+    modes: "drun,run";
     padding: 14;
     show-icons: true;
     transparency: "real";
