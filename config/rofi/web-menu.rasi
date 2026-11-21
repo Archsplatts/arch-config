@@ -9,8 +9,8 @@ configuration {
 
 element {
     background-color: inherit;
-    padding: 10;
-    spacing: 10;
+    padding: 10px;
+    spacing: 10px;
     text-color: @text;
 }
 
@@ -67,7 +67,7 @@ window {
     border-radius: 8px;
     icon-theme: "Papirus";
     modes: "drun";
-    padding: 14;
+    padding: 14px;
     show-icons: true;
     transparency: "real";
     width: 20%;
