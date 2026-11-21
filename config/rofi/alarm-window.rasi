@@ -57,9 +57,7 @@ listview {
 mainbox {
     background-color: transparent;
     border-color: @selected;
-    border-radius: 0px;
     children: [ "listview" ];
-    margin: 0px;
     padding: 14px;
     spacing: 14px;
 }
@@ -71,7 +69,7 @@ window {
     border-radius: 8px;
     icon-theme: "Papirus";
     modes: "drun";
-    padding: 14;
+    padding: 14px;
     show-icons: true;
     transparency: "real";
     width: 20%;
