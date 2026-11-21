@@ -9,8 +9,8 @@ configuration {
 
 element {
     background-color: inherit;
-    padding: 10;
-    spacing: 10;
+    padding: 10px;
+    spacing: 10px;
     text-color: @text;
 }
 
