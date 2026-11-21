@@ -86,8 +86,6 @@ inputbar {
     border-color: @selected;
     border-radius: 0px;
     children: [ "prompt", "entry" ];
-    margin: 0px;
-    padding: 0px;
     spacing: 20px;
     text-color: @foreground;
 }
@@ -105,11 +103,8 @@ listview {
     fixed-height: true;
     layout: vertical;
     lines: 1;
-    margin: 0px;
-    padding: 0px;
     reverse: false;
     scrollbar: false;
-    spacing: 0px;
     text-color: @foreground;
 }
 
