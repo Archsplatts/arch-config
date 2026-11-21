@@ -132,6 +132,5 @@ window {
     border: 0px solid;
     cursor: "default";
     fullscreen: true;
-    location: center;
     transparency: "real";
 }   
