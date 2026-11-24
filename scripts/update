@@ -1,2 +1,2 @@
 #!/bin/bash
-foot sh -c "sudo pacman -Syu; echo; read -n 1 -s -p \"Appuyez sur une touche pour quitter...\"; pkill -SIGRTMIN+1 waybar"
+foot bash -c "sudo pacman -Syu; pkill -SIGRTMIN+1 waybar; echo; echo 'Appuyer sur une touche pour quitter...'; read -sn1"
