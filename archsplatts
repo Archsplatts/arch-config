@@ -209,7 +209,7 @@ sudo cp -r "$HOME/arch-config/catppuccin-mocha-blue" "/usr/share/sddm/themes/"
 cp -r "$HOME/arch-config/config"/* "$HOME/.config/"
 cp -r "$HOME/arch-config/Notes"/* "$HOME/Documents/Notes/"
 cp -r "$HOME/arch-config/scripts"/* "$HOME/.scripts/"
-cp "$HOME/arch-config/koi.jpg" "$HOME/Images/Wallpapers/koi.jpg"
+cp "$HOME/arch-config/corals-fish-underwater.jpg" "$HOME/Images/Wallpapers/"
 sudo cp "$HOME/arch-config/sddm.conf" "/etc/"
 cp "$HOME/arch-config/zshrc" "$HOME/.zshrc"
 
