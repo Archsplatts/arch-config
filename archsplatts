@@ -201,6 +201,7 @@ mkdir -p "$HOME/.local/share/applications"
 mkdir -p "$HOME/.local/share/themes"
 mkdir -p "$HOME/.scripts"
 mkdir -p "$HOME/Documents/Notes"
+mkdir -p "$HOME/Images/Captures"
 mkdir -p "$HOME/Images/Wallpapers"
 
 cp -r "$HOME/arch-config/applications"/* "$HOME/.local/share/applications/"
