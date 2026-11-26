@@ -205,10 +205,12 @@ mkdir -p "$HOME/Images/Captures"
 mkdir -p "$HOME/Images/Wallpapers"
 
 cp -r "$HOME/arch-config/applications"/* "$HOME/.local/share/applications/"
+sudo cp -r "$HOME/arch-config/catppuccin-mocha-blue" "/usr/share/sddm/themes/"
 cp -r "$HOME/arch-config/config"/* "$HOME/.config/"
 cp -r "$HOME/arch-config/Notes"/* "$HOME/Documents/Notes/"
 cp -r "$HOME/arch-config/scripts"/* "$HOME/.scripts/"
 cp "$HOME/arch-config/koi.jpg" "$HOME/Images/Wallpapers/koi.jpg"
+sudo cp "$HOME/arch-config/sddm.conf" "/etc/"
 cp "$HOME/arch-config/zshrc" "$HOME/.zshrc"
 
 chmod u+x "$HOME/.config/mango/autostart.sh"
