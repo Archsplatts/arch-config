@@ -8,7 +8,7 @@ mako >/dev/null 2>&1 &
 
 gammastep >/dev/null 2>&1 &
 
-swaybg -i ~/Images/Wallpapers/koi.jpg >/dev/null 2>&1 &
+swaybg -i ~/Images/Wallpapers/corals-fish-underwater.jpg >/dev/null 2>&1 &
 
 waybar -c ~/.config/mango/waybar/config.jsonc -s ~/.config/mango/waybar/style.css >/dev/null 2>&1 &
 
